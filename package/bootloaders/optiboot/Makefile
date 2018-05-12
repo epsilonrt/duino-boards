@@ -33,7 +33,7 @@ USER_PROJECT = OPTIBOOT
 #----------------------------------------------------------------------------
 #                               ~~~~AVRIO~~~~
 # Chemin relatif du répertoire racine d'AVRIO
-AVRIO_TOPDIR = $(abspath ../avrio)
+AVRIO_TOPDIR = $(abspath $(AVRIO_ROOT))
 
 # Nom de la carte cible (voir le fichier avrio/boards.txt pour la liste)
 # Si BOARD est vide, il faut un fichier board.mk pour définir les propriétés de
@@ -171,6 +171,11 @@ AVRDUDE_LFUSE = 0xF7
 AVRDUDE_HFUSE = 0x1E
 AVRDUDE_EFUSE = 0xFD
 AVRDUDE_LOCK  = 0xEF
+
+#------------------------------------------------------------------------------
+ifeq ($(DEBUG),ON)
+TARGET = bootloader_optiboot
+endif
 
 #------------------------------------------------------------------------------
 include $(AVRIO_TOPDIR)/script/common.mk

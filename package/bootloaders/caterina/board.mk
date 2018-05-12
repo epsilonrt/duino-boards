@@ -3,7 +3,7 @@
 ###############################################################################
 
 #----------------------------------------------------------------------------
-ifeq ($(BOARD),XPLBEE)
+ifeq ($(BOARD),LEONARDO)
 
 # List any extra directories to look for include files here.
 #     Each directory must be seperated by a space.
@@ -18,7 +18,7 @@ AVRIOBRDDIR = $(PROJECT_TOPDIR)/board
 # MCU name
 ifeq ($(MCU),)
 # !! You must change the following setting to match your target board !!
-MCU = atmega1284p
+MCU = atmega32u4
 endif
 
 # Processor frequency.
@@ -88,9 +88,9 @@ AVARICE_OPT ?= --dragon
 #AVRDUDE_PORT ?= lpt1
 
 # Fuses and lock for fuse target
-AVRDUDE_LFUSE ?= 0xF7
-AVRDUDE_HFUSE ?= 0x1E
-AVRDUDE_EFUSE ?= 0xFD
+AVRDUDE_LFUSE ?= 0xFF
+AVRDUDE_HFUSE ?= 0x98
+AVRDUDE_EFUSE ?= 0xCB
 AVRDUDE_LOCK  ?= 0xEF
 
 # Set the DEBUG_UI to either gdb or insight.

@@ -33,6 +33,7 @@
     <File Name="Makefile"/>
     <File Name="Descriptors.h"/>
     <File Name="Caterina.c"/>
+    <File Name="board.mk"/>
   </VirtualDirectory>
   <Description/>
   <Dependencies/>

@@ -4,9 +4,9 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>7.0</ProjectVersion>
     <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
-    <ProjectGuid>a6153699-a74f-4135-a806-4611eafc562d</ProjectGuid>
+    <ProjectGuid>{a075243d-8399-4488-907a-83f4a9281c9d}</ProjectGuid>
     <Name>bootloader_caterina</Name>
-    <avrdevice>ATmega1284P</avrdevice>
+    <avrdevice>ATmega32U4</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <AvrProjectType>Importer</AvrProjectType>
     <OutputType>Executable</OutputType>
@@ -39,11 +39,11 @@
       </framework-data>
     </AsfFrameworkConfig>
     <avrtoolserialnumber>00A20004202A</avrtoolserialnumber>
-    <avrdeviceexpectedsignature>0x1E9705</avrdeviceexpectedsignature>
+    <avrdeviceexpectedsignature>0x1E9587</avrdeviceexpectedsignature>
     <com_atmel_avrdbg_tool_avrdragon>
       <ToolOptions>
         <InterfaceProperties>
-          <JtagDbgClock>1000000</JtagDbgClock>
+          <JtagDbgClock>1935359</JtagDbgClock>
           <JtagEnableExtResetOnStartSession>true</JtagEnableExtResetOnStartSession>
           <JtagInChain>false</JtagInChain>
           <JtagDevicesBefore>0</JtagDevicesBefore>
@@ -63,7 +63,7 @@
       <ToolName>AVR Dragon</ToolName>
     </com_atmel_avrdbg_tool_avrdragon>
     <avrtoolinterface>JTAG</avrtoolinterface>
-    <avrtoolinterfaceclock>1000000</avrtoolinterfaceclock>
+    <avrtoolinterfaceclock>1935359</avrtoolinterfaceclock>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'default' ">
     <OutputPath>bin\default\</OutputPath>
@@ -102,5 +102,19 @@
     <None Include="Makefile">
       <SubType>compile</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caterina.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Caterina.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Descriptors.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Descriptors.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

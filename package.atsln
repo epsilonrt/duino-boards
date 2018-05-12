@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Atmel Studio Solution File, Format Version 11.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "bootloader_optiboot", "package\bootloaders\optiboot\bootloader_optiboot.cproj", "{A6153699-A74F-4135-A806-4611EAFC562D}"
+EndProject
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "bootloader_caterina", "package\bootloaders\caterina\bootloader_caterina.cproj", "{A075243D-8399-4488-907A-83F4A9281C9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		default|AVR = default|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6153699-A74F-4135-A806-4611EAFC562D}.default|AVR.ActiveCfg = default|AVR
+		{A6153699-A74F-4135-A806-4611EAFC562D}.default|AVR.Build.0 = default|AVR
+		{A075243D-8399-4488-907A-83F4A9281C9D}.default|AVR.ActiveCfg = default|AVR
+		{A075243D-8399-4488-907A-83F4A9281C9D}.default|AVR.Build.0 = default|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

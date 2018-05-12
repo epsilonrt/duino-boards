@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="package" Database="" Version="10.0.0">
+  <Project Name="bootloader_optiboot" Path="package/bootloaders/optiboot/bootloader_optiboot.project" Active="No"/>
+  <Project Name="bootloader_caterina" Path="package/bootloaders/caterina/bootloader_caterina.project" Active="Yes"/>
   <Project Name="package" Path="package.project" Active="No"/>
-  <Project Name="bootloader_optiboot" Path="package/bootloaders/optiboot/bootloader_optiboot.project" Active="Yes"/>
-  <Project Name="bootloader_caterina" Path="package/bootloaders/caterina/bootloader_caterina.project" Active="No"/>
   <BuildMatrix>
-    <WorkspaceConfiguration Name="Debug" Selected="no">
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
-      <Project Name="package" ConfigName="Debug"/>
       <Project Name="bootloader_optiboot" ConfigName="Debug"/>
       <Project Name="bootloader_caterina" ConfigName="Debug"/>
+      <Project Name="package" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
-      <Project Name="package" ConfigName="Release"/>
       <Project Name="bootloader_optiboot" ConfigName="Release"/>
       <Project Name="bootloader_caterina" ConfigName="Release"/>
+      <Project Name="package" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
