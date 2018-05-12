@@ -24,19 +24,16 @@
 # make filename.i = Create a preprocessed source file for use in submitting
 #                   bug reports to the GCC project.
 
-# Nom du fichier cible (sans extension).
-TARGET = xplbee_bootloader
-
 # Chemin relatif du répertoire racine du projet de l'utilisateur
-PROJECT_TOPDIR = ../../../..
+PROJECT_TOPDIR = .
 
 # User Project
-USER_PROJECT = XPLBEE
+USER_PROJECT = OPTIBOOT
 
 #----------------------------------------------------------------------------
 #                               ~~~~AVRIO~~~~
 # Chemin relatif du répertoire racine d'AVRIO
-AVRIO_TOPDIR = $(abspath $(AVRIO_ROOT))
+AVRIO_TOPDIR = $(abspath ../avrio)
 
 # Nom de la carte cible (voir le fichier avrio/boards.txt pour la liste)
 # Si BOARD est vide, il faut un fichier board.mk pour définir les propriétés de
@@ -48,11 +45,17 @@ GIT_VERSION = OFF
 
 # Configuration
 # -------------------------------
+ifeq ($(BOARD),XPLBEE)
+# Nom du fichier cible (sans extension).
+TARGET = optiboot-xplbee
 AVRIO_CONFIG  = BAUD_RATE=115200
 AVRIO_CONFIG += LED_START_FLASHES=3
 AVRIO_CONFIG += LED=B7
 AVRIO_CONFIG += BIGBOOT
 AVRIO_CONFIG += OPTIBOOT_CUSTOMVER=1
+else
+$(error Board not supported)
+endif
 
 # Valide le noyau multitâche temps réel AVRX (sous forme de bibliothèque)
 AVRX = OFF
