@@ -35,6 +35,7 @@
 
 #define  INCLUDE_FROM_CATERINA_C
 #include "Caterina.h"
+#include "UsbPower.h"
 
 /** Contains the current baud rate and other settings of the first virtual serial port. This must be retained as some
  *  operating systems will not open the port unless the settings can be set successfully.
@@ -85,6 +86,8 @@ void StartSketch (void) {
   RX_LED_OFF();
   TX_LED_OFF();
   L_LED_OFF();
+
+  USBPWR_AD_RELEASE();
 
   /* jump to beginning of application space */
   __asm__ volatile ("jmp 0x0000");
@@ -163,6 +166,7 @@ int main (void) {
 
 /** Configures all hardware required for the bootloader. */
 void SetupHardware (void) {
+
   /* Disable watchdog if enabled by bootloader/fuses */
   MCUSR &= ~ (1 << WDRF);
   wdt_disable();
@@ -191,8 +195,11 @@ void SetupHardware (void) {
   TIMSK1 = (1 << OCIE1A);         // enable timer 1 output compare A match interrupt
   TCCR1B = ( (1 << CS11) | (1 << CS10)); // 1/64 prescaler on timer 1 input
 
+  /* Audetect/Autoswitch USB Power Mode */
+  USBPWR_AD_SETUP();
+  
   /* Initialize USB Subsystem */
-  USB_Init();
+  USB_Init (USBPWR_GET_MODE());
 }
 
 //uint16_t ctr = 0;

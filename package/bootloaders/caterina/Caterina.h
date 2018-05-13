@@ -46,6 +46,7 @@
 #include <stdbool.h>
 
 #include "Descriptors.h"
+#include "Variants.h"
 
 #include <LUFA/Drivers/USB/USB.h>
 /* Macros: */
@@ -66,39 +67,20 @@
 
 #define CPU_PRESCALE(n) (CLKPR = 0x80, CLKPR = (n))
 
-#define STANDARD    0
-#define TOUERIS_HMI 1
-
-#if VARIANT == STANDARD
-#define L_LED_DDR DDRC
-#define L_LED_PORT PORTC
-#define L_LED_BIT 7
-#define L_LED_ACT 1
-#define TX_LED_DDR DDRD
-#define TX_LED_PORT PORTD
-#define TX_LED_BIT 5
-#define TX_LED_ACT 0
-#define RX_LED_DDR DDRB
-#define RX_LED_PORT PORTB
-#define RX_LED_BIT 0
-#define RX_LED_ACT 0
-#elif VARIANT == TOUERIS_HMI
-#define L_LED_DDR DDRD
-#define L_LED_PORT PORTD
-#define L_LED_BIT 7
-#define L_LED_ACT 1
-#define TX_LED_DDR DDRD
-#define TX_LED_PORT PORTD
-#define TX_LED_BIT 5
-#define TX_LED_ACT 1
-#define RX_LED_DDR DDRB
-#define RX_LED_PORT PORTB
-#define RX_LED_BIT 0
-#define RX_LED_ACT 1
+static inline void 
+LED_SETUP (void) {
+#ifdef L_LED_DDR
+  L_LED_DDR |= (1 << L_LED_BIT);
 #endif
+#ifdef RX_LED_DDR
+  RX_LED_DDR |= (1 << RX_LED_BIT);
+#endif
+#ifdef TX_LED_DDR
+  TX_LED_DDR |= (1 << TX_LED_BIT);
+#endif
+}
 
-#define LED_SETUP()   do { L_LED_DDR |= (1<<L_LED_BIT); RX_LED_DDR |= (1<<RX_LED_BIT); TX_LED_DDR |= (1<<TX_LED_BIT); } while(0)
-
+#ifdef L_LED_PORT
 #if L_LED_ACT != 0
 #define L_LED_OFF()     L_LED_PORT &= ~(1<<L_LED_BIT)
 #define L_LED_ON()      L_LED_PORT |= (1<<L_LED_BIT)
@@ -106,9 +88,15 @@
 #define L_LED_OFF()     L_LED_PORT |= (1<<L_LED_BIT)
 #define L_LED_ON()      L_LED_PORT &= ~(1<<L_LED_BIT)
 #endif
-
 #define L_LED_TOGGLE()  L_LED_PORT ^= (1<<L_LED_BIT)
+#else
+#define LED_SETUP()
+#define L_LED_OFF()
+#define L_LED_ON()
+#define L_LED_TOGGLE()
+#endif
 
+#ifdef TX_LED_PORT
 #if TX_LED_ACT != 0
 #define TX_LED_OFF()    TX_LED_PORT &= ~(1<<TX_LED_BIT)
 #define TX_LED_ON()     TX_LED_PORT |= (1<<TX_LED_BIT)
@@ -116,7 +104,12 @@
 #define TX_LED_OFF()    TX_LED_PORT |= (1<<TX_LED_BIT)
 #define TX_LED_ON()     TX_LED_PORT &= ~(1<<TX_LED_BIT)
 #endif
+#else
+#define TX_LED_OFF()
+#define TX_LED_ON()
+#endif
 
+#ifdef RX_LED_PORT
 #if RX_LED_ACT != 0
 #define RX_LED_OFF()    RX_LED_PORT &= ~(1<<RX_LED_BIT)
 #define RX_LED_ON()     RX_LED_PORT |= (1<<RX_LED_BIT)
@@ -124,6 +117,11 @@
 #define RX_LED_OFF()    RX_LED_PORT |= (1<<RX_LED_BIT)
 #define RX_LED_ON()     RX_LED_PORT &= ~(1<<RX_LED_BIT)
 #endif
+#else
+#define RX_LED_OFF()
+#define RX_LED_ON()
+#endif
+
 
 /* Type Defines: */
 /** Type define for a non-returning pointer to the start of the loaded application in flash memory. */

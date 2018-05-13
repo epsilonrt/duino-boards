@@ -3,7 +3,7 @@
 ###############################################################################
 
 #----------------------------------------------------------------------------
-ifeq ($(BOARD),LEONARDO)
+ifeq ($(BOARD),DUINO_M32U4)
 
 # List any extra directories to look for include files here.
 #     Each directory must be seperated by a space.

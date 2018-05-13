@@ -34,6 +34,8 @@
     <File Name="Descriptors.h"/>
     <File Name="Caterina.c"/>
     <File Name="board.mk"/>
+    <File Name="Variants.h"/>
+    <File Name="UsbPower.h"/>
   </VirtualDirectory>
   <Description/>
   <Dependencies/>

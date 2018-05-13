@@ -36,6 +36,7 @@
  */
 
 #include "Descriptors.h"
+#include "Variants.h"
 
 /** Device descriptor structure. This descriptor, located in SRAM memory, describes the overall
  *  device characteristics, including the supported USB version, control endpoint size and the
@@ -78,8 +79,7 @@ const USB_Descriptor_Configuration_t ConfigurationDescriptor = {
 
     .ConfigurationNumber    = 1,
     .ConfigurationStrIndex  = NO_DESCRIPTOR,
-
-    .ConfigAttributes       = USB_CONFIG_ATTR_BUSPOWERED,
+    .ConfigAttributes       = USBPWR_MODE, // Chosen according to the VARIANT (see Variant.h)
 
     .MaxPowerConsumption    = USB_CONFIG_POWER_MA (100)
   },
@@ -195,6 +195,14 @@ const USB_Descriptor_String_t ProductString = {
   .UnicodeString      = L"Arduino Micro   "
 #elif DEVICE_PID == 0x003C
   .UnicodeString      = L"Arduino Esplora "
+#elif DEVICE_PID == 0x3003
+  .UnicodeString      = L"Toueris CTOR    "
+#elif DEVICE_PID == 0x3004
+  .UnicodeString      = L"Toueris MTOR    "
+#elif DEVICE_PID == 0x3005
+  .UnicodeString      = L"Toueris MTMP    "
+#elif DEVICE_PID == 0x3006
+  .UnicodeString      = L"Toueris DHMI    "
 #else
   .UnicodeString      = L"USB IO board    "
 #endif
@@ -205,6 +213,8 @@ const USB_Descriptor_String_t ManufNameString = {
 
 #if DEVICE_VID == 0x2341
   .UnicodeString      = L"Arduino LLC"
+#elif DEVICE_VID == 0x1209
+  .UnicodeString      = L"epsilonrt  "
 #else
   .UnicodeString      = L"Unknown    "
 #endif

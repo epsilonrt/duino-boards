@@ -39,9 +39,9 @@ AVRIO_TOPDIR = $(abspath $(AVRIO_ROOT))
 # Nom de la carte cible (voir le fichier avrio/boards.txt pour la liste)
 # Si BOARD est vide, il faut un fichier board.mk pour définir les propriétés de
 # la carte dans le répertoire où se trouve ce Makefile !
-BOARD = LEONARDO
+BOARD = DUINO_M32U4
 
-VARIANT = TOUERIS_HMI
+VARIANT ?= TOUERIS_DHMI
 
 # Permet de générer un fichier version-git.h permettant de récupérer les informations sur la version
 GIT_VERSION = OFF
@@ -52,7 +52,7 @@ GIT_VERSION = OFF
 ifeq ($(VARIANT),STANDARD)
 #-------------------------------------------------------------------------------
 # Nom du fichier cible (sans extension).
-TARGET = caterina-leonardo-standard
+TARGET = caterina-m32u4-standard
 # USB vendor ID (VID)
 # reuse of this VID by others is forbidden by USB-IF
 # official Arduino LLC VID
@@ -61,23 +61,41 @@ VID = 0x2341
 # official Leonardo PID
 PID = 0x0036
 
-else
-ifeq ($(VARIANT),TOUERIS_HMI)
+else ifeq ($(VARIANT),TOUERIS_DHMI)
 #-------------------------------------------------------------------------------
 # Nom du fichier cible (sans extension).
-TARGET = caterina-leonardo-toueris-hmi
+TARGET = caterina-toueris-dhmi
 # USB vendor ID (VID)
 # reuse of this VID by others is forbidden by USB-IF
+# epsilonrt VID (pid.codes)
+#VID = 0x1209
 # official Arduino LLC VID
 VID = 0x2341
 # USB product ID (PID)
+# epsilonrt Toueris DHMI PID
+#PID = 0x3003
+# official Leonardo PID
+PID = 0x0036
+
+else ifeq ($(VARIANT),TOUERIS_SLAVE)
+#-------------------------------------------------------------------------------
+# Nom du fichier cible (sans extension).
+TARGET = caterina-toueris-slave
+# USB vendor ID (VID)
+# reuse of this VID by others is forbidden by USB-IF
+# epsilonrt VID (pid.codes)
+#VID = 0x1209
+# official Arduino LLC VID
+VID = 0x2341
+# USB product ID (PID)
+# epsilonrt Toueris SLAVE PID
+#PID = 0x3004
 # official Leonardo PID
 PID = 0x0036
 
 #-------------------------------------------------------------------------------
 else
 $(error Variant not supported)
-endif
 endif
 
 #                          ~~~~Configuration~~~~
@@ -114,9 +132,9 @@ LUFA_DEFS += -D ORDERED_EP_CONFIG
 LUFA_DEFS += -D FIXED_CONTROL_ENDPOINT_SIZE=8
 LUFA_DEFS += -D FIXED_NUM_CONFIGURATIONS=1
 LUFA_DEFS += -D USE_RAM_DESCRIPTORS
-LUFA_DEFS += -D USE_STATIC_OPTIONS="(USB_DEVICE_OPT_FULLSPEED | USB_OPT_REG_ENABLED | USB_OPT_AUTO_PLL)"
+#LUFA_DEFS += -D USE_STATIC_OPTIONS="(USB_DEVICE_OPT_FULLSPEED | USB_OPT_REG_ENABLED | USB_OPT_AUTO_PLL)"
 LUFA_DEFS += -D NO_INTERNAL_SERIAL
-LUFA_DEFS += -D NO_DEVICE_SELF_POWER
+#LUFA_DEFS += -D NO_DEVICE_SELF_POWER
 LUFA_DEFS += -D NO_DEVICE_REMOTE_WAKEUP
 LUFA_DEFS += -D NO_SOF_EVENTS
 
@@ -229,7 +247,7 @@ AVRDUDE_EFUSE = 0xCB
 AVRDUDE_LOCK  = 0xEF
 
 #------------------------------------------------------------------------------
-ifeq ($(BOARD),LEONARDO)
+ifeq ($(BOARD),DUINO_M32U4)
 #-------------------------------------------------------------------------------
 # Starting byte address of the bootloader, as a byte address - computed via the formula
 #   BOOT_START = ((FLASH_SIZE_KB - BOOT_SECTION_SIZE_KB) * 1024)
