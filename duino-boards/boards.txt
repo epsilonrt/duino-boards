@@ -88,14 +88,14 @@ touerisdhmi.build.variant=toueris-dhmi
 touerisdhmi.build.extra_flags={build.usb_flags}
 
 # Brown out detection
+touerisdhmi.menu.BOD.2v6=2.6v (default)
+touerisdhmi.menu.BOD.2v6.bootloader.extended_fuses=0xcb
 touerisdhmi.menu.BOD.2v0=2.0v
 touerisdhmi.menu.BOD.2v0.bootloader.extended_fuses=0xce
 touerisdhmi.menu.BOD.2v2=2.2v
 touerisdhmi.menu.BOD.2v2.bootloader.extended_fuses=0xcd
 touerisdhmi.menu.BOD.2v4=2.4v
 touerisdhmi.menu.BOD.2v4.bootloader.extended_fuses=0xcc
-touerisdhmi.menu.BOD.2v6=2.6v
-touerisdhmi.menu.BOD.2v6.bootloader.extended_fuses=0xcb
 touerisdhmi.menu.BOD.3v4=3.4v
 touerisdhmi.menu.BOD.3v4.bootloader.extended_fuses=0xca
 touerisdhmi.menu.BOD.3v5=3.5v
@@ -152,14 +152,14 @@ touerismb.build.variant=toueris-modbus
 touerismb.build.extra_flags={build.usb_flags}
 
 # Brown out detection
+touerismb.menu.BOD.2v6=2.6v (default)
+touerismb.menu.BOD.2v6.bootloader.extended_fuses=0xcb
 touerismb.menu.BOD.2v0=2.0v
 touerismb.menu.BOD.2v0.bootloader.extended_fuses=0xce
 touerismb.menu.BOD.2v2=2.2v
 touerismb.menu.BOD.2v2.bootloader.extended_fuses=0xcd
 touerismb.menu.BOD.2v4=2.4v
 touerismb.menu.BOD.2v4.bootloader.extended_fuses=0xcc
-touerismb.menu.BOD.2v6=2.6v
-touerismb.menu.BOD.2v6.bootloader.extended_fuses=0xcb
 touerismb.menu.BOD.3v4=3.4v
 touerismb.menu.BOD.3v4.bootloader.extended_fuses=0xca
 touerismb.menu.BOD.3v5=3.5v
