@@ -219,6 +219,53 @@
     </VirtualDirectory>
   </VirtualDirectory>
   <VirtualDirectory Name="duino-boards">
+    <VirtualDirectory Name="cores">
+      <VirtualDirectory Name="arduino">
+        <File Name="duino-boards/cores/arduino/wiring.c"/>
+        <File Name="duino-boards/cores/arduino/Stream.h"/>
+        <File Name="duino-boards/cores/arduino/CDC.cpp"/>
+        <File Name="duino-boards/cores/arduino/USBDesc.h"/>
+        <File Name="duino-boards/cores/arduino/Print.h"/>
+        <File Name="duino-boards/cores/arduino/HardwareSerial3.cpp"/>
+        <File Name="duino-boards/cores/arduino/PluggableUSB.h"/>
+        <File Name="duino-boards/cores/arduino/wiring_digital.c"/>
+        <File Name="duino-boards/cores/arduino/Server.h"/>
+        <File Name="duino-boards/cores/arduino/WString.cpp"/>
+        <File Name="duino-boards/cores/arduino/Printable.h"/>
+        <File Name="duino-boards/cores/arduino/Print.cpp"/>
+        <File Name="duino-boards/cores/arduino/HardwareSerial1.cpp"/>
+        <File Name="duino-boards/cores/arduino/wiring_analog.c"/>
+        <File Name="duino-boards/cores/arduino/WMath.cpp"/>
+        <File Name="duino-boards/cores/arduino/USBAPI.h"/>
+        <File Name="duino-boards/cores/arduino/abi.cpp"/>
+        <File Name="duino-boards/cores/arduino/WInterrupts.c"/>
+        <File Name="duino-boards/cores/arduino/HardwareSerial.cpp"/>
+        <File Name="duino-boards/cores/arduino/new.cpp"/>
+        <File Name="duino-boards/cores/arduino/Tone.cpp"/>
+        <File Name="duino-boards/cores/arduino/USBCore.cpp"/>
+        <File Name="duino-boards/cores/arduino/wiring_pulse.c"/>
+        <File Name="duino-boards/cores/arduino/WString.h"/>
+        <File Name="duino-boards/cores/arduino/wiring_shift.c"/>
+        <File Name="duino-boards/cores/arduino/PluggableUSB.cpp"/>
+        <File Name="duino-boards/cores/arduino/HardwareSerial_private.h"/>
+        <File Name="duino-boards/cores/arduino/Udp.h"/>
+        <File Name="duino-boards/cores/arduino/Client.h"/>
+        <File Name="duino-boards/cores/arduino/HardwareSerial2.cpp"/>
+        <File Name="duino-boards/cores/arduino/Arduino.h"/>
+        <File Name="duino-boards/cores/arduino/main.cpp"/>
+        <File Name="duino-boards/cores/arduino/IPAddress.h"/>
+        <File Name="duino-boards/cores/arduino/USBCore.h"/>
+        <File Name="duino-boards/cores/arduino/binary.h"/>
+        <File Name="duino-boards/cores/arduino/WCharacter.h"/>
+        <File Name="duino-boards/cores/arduino/hooks.c"/>
+        <File Name="duino-boards/cores/arduino/new.h"/>
+        <File Name="duino-boards/cores/arduino/HardwareSerial0.cpp"/>
+        <File Name="duino-boards/cores/arduino/HardwareSerial.h"/>
+        <File Name="duino-boards/cores/arduino/wiring_private.h"/>
+        <File Name="duino-boards/cores/arduino/Stream.cpp"/>
+        <File Name="duino-boards/cores/arduino/IPAddress.cpp"/>
+      </VirtualDirectory>
+    </VirtualDirectory>
     <File Name="README.md"/>
     <File Name="COPYING"/>
     <File Name="Makefile"/>
