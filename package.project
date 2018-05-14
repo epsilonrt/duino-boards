@@ -219,6 +219,7 @@
     </VirtualDirectory>
   </VirtualDirectory>
   <VirtualDirectory Name="duino-boards">
+    <File Name="platform.txt.in"/>
     <VirtualDirectory Name="cores">
       <VirtualDirectory Name="arduino">
         <File Name="duino-boards/cores/arduino/wiring.c"/>

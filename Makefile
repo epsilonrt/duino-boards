@@ -34,10 +34,13 @@ duino-boards.tar.gz: bootloader
 
 tar: duino-boards.tar.gz
 
+duino-boards/platform.txt: platform.txt.in version
+	@sed  -e 's/@VERSION@/$(VERSION)/'  $< > $@
+
 package_epsilonrt_duino_boards_index.json: package_epsilonrt_duino_boards_index.json.in version hash size 
 	@sed -e 's/@HASH@/$(HASH)/' -e 's/@VERSION@/$(VERSION)/' -e 's/@VERSION_TINY@/$(VERSION_TINY)/' -e 's/@SIZE@/$(SIZE)/' $< > $@
 
-package: package_epsilonrt_duino_boards_index.json
+package: package_epsilonrt_duino_boards_index.json duino-boards/platform.txt
 	@echo  "\n\nYou should install '$<' and 'duino-boards.tar.gz' in the release space: https://github.com/epsilonrt/duino-boards/releases/tag/v$(VERSION)"
 
 .PHONY: all clean distclean rebuild tar version hash size package
