@@ -6,13 +6,13 @@ all: package
 rebuild: clean package
 
 bootloader:
-	@$(MAKE) -w -C package/bootloaders
+	@$(MAKE) -w -C duino-boards/bootloaders
 
 clean:
-	@$(MAKE) -w -C package/bootloaders $(MAKECMDGOALS)
+	@$(MAKE) -w -C duino-boards/bootloaders $(MAKECMDGOALS)
 
 distclean:
-	@$(MAKE) -w -C package/bootloaders $(MAKECMDGOALS)
+	@$(MAKE) -w -C duino-boards/bootloaders $(MAKECMDGOALS)
 	@rm -f package_epsilonrt_duino_boards_index.json
 	@rm -f duino-boards.tar.gz
 
@@ -30,7 +30,7 @@ size: duino-boards.tar.gz
 	@echo Package Size: $(SIZE) bytes
 
 duino-boards.tar.gz: bootloader
-	@tar czf $@  package
+	@tar czf $@  duino-boards
 
 tar: duino-boards.tar.gz
 

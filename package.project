@@ -27,194 +27,194 @@
     </Plugin>
   </Plugins>
   <VirtualDirectory Name="package">
-    <File Name="package/externalprogrammers.txt"/>
-    <File Name="package/platform.txt"/>
-    <File Name="package/programmers.txt"/>
-    <File Name="package/boards.txt"/>
+    <File Name="duino-boards/externalprogrammers.txt"/>
+    <File Name="duino-boards/platform.txt"/>
+    <File Name="duino-boards/programmers.txt"/>
+    <File Name="duino-boards/boards.txt"/>
     <VirtualDirectory Name="cores">
       <VirtualDirectory Name="MightyCore">
-        <File Name="package/cores/MightyCore/wiring.c"/>
-        <File Name="package/cores/MightyCore/Stream.h"/>
-        <File Name="package/cores/MightyCore/CDC.cpp"/>
-        <File Name="package/cores/MightyCore/USBDesc.h"/>
-        <File Name="package/cores/MightyCore/Print.h"/>
-        <File Name="package/cores/MightyCore/HardwareSerial3.cpp"/>
-        <File Name="package/cores/MightyCore/PluggableUSB.h"/>
-        <File Name="package/cores/MightyCore/Platform.h"/>
-        <File Name="package/cores/MightyCore/wiring_digital.c"/>
-        <File Name="package/cores/MightyCore/Server.h"/>
-        <File Name="package/cores/MightyCore/WString.cpp"/>
-        <File Name="package/cores/MightyCore/Printable.h"/>
-        <File Name="package/cores/MightyCore/Print.cpp"/>
-        <File Name="package/cores/MightyCore/HardwareSerial1.cpp"/>
-        <File Name="package/cores/MightyCore/wiring_analog.c"/>
-        <File Name="package/cores/MightyCore/WMath.cpp"/>
-        <File Name="package/cores/MightyCore/USBAPI.h"/>
-        <File Name="package/cores/MightyCore/abi.cpp"/>
-        <File Name="package/cores/MightyCore/WInterrupts.c"/>
-        <File Name="package/cores/MightyCore/HardwareSerial.cpp"/>
-        <File Name="package/cores/MightyCore/new.cpp"/>
-        <File Name="package/cores/MightyCore/Tone.cpp"/>
-        <File Name="package/cores/MightyCore/USBCore.cpp"/>
-        <File Name="package/cores/MightyCore/wiring_pulse.c"/>
-        <File Name="package/cores/MightyCore/WString.h"/>
-        <File Name="package/cores/MightyCore/wiring_shift.c"/>
-        <File Name="package/cores/MightyCore/PluggableUSB.cpp"/>
-        <File Name="package/cores/MightyCore/HardwareSerial_private.h"/>
-        <File Name="package/cores/MightyCore/Udp.h"/>
-        <File Name="package/cores/MightyCore/Client.h"/>
-        <File Name="package/cores/MightyCore/HardwareSerial2.cpp"/>
-        <File Name="package/cores/MightyCore/wiring_extras.h"/>
-        <File Name="package/cores/MightyCore/Arduino.h"/>
-        <File Name="package/cores/MightyCore/main.cpp"/>
-        <File Name="package/cores/MightyCore/IPAddress.h"/>
-        <File Name="package/cores/MightyCore/USBCore.h"/>
-        <File Name="package/cores/MightyCore/wiring_extras.cpp"/>
-        <File Name="package/cores/MightyCore/binary.h"/>
-        <File Name="package/cores/MightyCore/WCharacter.h"/>
-        <File Name="package/cores/MightyCore/hooks.c"/>
-        <File Name="package/cores/MightyCore/HID.cpp"/>
-        <File Name="package/cores/MightyCore/new.h"/>
-        <File Name="package/cores/MightyCore/HardwareSerial0.cpp"/>
-        <File Name="package/cores/MightyCore/HardwareSerial.h"/>
-        <File Name="package/cores/MightyCore/wiring_private.h"/>
-        <File Name="package/cores/MightyCore/Stream.cpp"/>
-        <File Name="package/cores/MightyCore/IPAddress.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/wiring.c"/>
+        <File Name="duino-boards/cores/MightyCore/Stream.h"/>
+        <File Name="duino-boards/cores/MightyCore/CDC.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/USBDesc.h"/>
+        <File Name="duino-boards/cores/MightyCore/Print.h"/>
+        <File Name="duino-boards/cores/MightyCore/HardwareSerial3.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/PluggableUSB.h"/>
+        <File Name="duino-boards/cores/MightyCore/Platform.h"/>
+        <File Name="duino-boards/cores/MightyCore/wiring_digital.c"/>
+        <File Name="duino-boards/cores/MightyCore/Server.h"/>
+        <File Name="duino-boards/cores/MightyCore/WString.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/Printable.h"/>
+        <File Name="duino-boards/cores/MightyCore/Print.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/HardwareSerial1.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/wiring_analog.c"/>
+        <File Name="duino-boards/cores/MightyCore/WMath.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/USBAPI.h"/>
+        <File Name="duino-boards/cores/MightyCore/abi.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/WInterrupts.c"/>
+        <File Name="duino-boards/cores/MightyCore/HardwareSerial.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/new.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/Tone.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/USBCore.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/wiring_pulse.c"/>
+        <File Name="duino-boards/cores/MightyCore/WString.h"/>
+        <File Name="duino-boards/cores/MightyCore/wiring_shift.c"/>
+        <File Name="duino-boards/cores/MightyCore/PluggableUSB.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/HardwareSerial_private.h"/>
+        <File Name="duino-boards/cores/MightyCore/Udp.h"/>
+        <File Name="duino-boards/cores/MightyCore/Client.h"/>
+        <File Name="duino-boards/cores/MightyCore/HardwareSerial2.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/wiring_extras.h"/>
+        <File Name="duino-boards/cores/MightyCore/Arduino.h"/>
+        <File Name="duino-boards/cores/MightyCore/main.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/IPAddress.h"/>
+        <File Name="duino-boards/cores/MightyCore/USBCore.h"/>
+        <File Name="duino-boards/cores/MightyCore/wiring_extras.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/binary.h"/>
+        <File Name="duino-boards/cores/MightyCore/WCharacter.h"/>
+        <File Name="duino-boards/cores/MightyCore/hooks.c"/>
+        <File Name="duino-boards/cores/MightyCore/HID.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/new.h"/>
+        <File Name="duino-boards/cores/MightyCore/HardwareSerial0.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/HardwareSerial.h"/>
+        <File Name="duino-boards/cores/MightyCore/wiring_private.h"/>
+        <File Name="duino-boards/cores/MightyCore/Stream.cpp"/>
+        <File Name="duino-boards/cores/MightyCore/IPAddress.cpp"/>
         <VirtualDirectory Name="avr-libc">
-          <File Name="package/cores/MightyCore/avr-libc/sectionname.h"/>
-          <File Name="package/cores/MightyCore/avr-libc/realloc.c"/>
-          <File Name="package/cores/MightyCore/avr-libc/malloc.c"/>
-          <File Name="package/cores/MightyCore/avr-libc/stdlib_private.h"/>
+          <File Name="duino-boards/cores/MightyCore/avr-libc/sectionname.h"/>
+          <File Name="duino-boards/cores/MightyCore/avr-libc/realloc.c"/>
+          <File Name="duino-boards/cores/MightyCore/avr-libc/malloc.c"/>
+          <File Name="duino-boards/cores/MightyCore/avr-libc/stdlib_private.h"/>
         </VirtualDirectory>
       </VirtualDirectory>
     </VirtualDirectory>
     <VirtualDirectory Name="variants">
       <VirtualDirectory Name="standard">
-        <File Name="package/variants/standard/pins_arduino.h"/>
+        <File Name="duino-boards/variants/standard/pins_arduino.h"/>
       </VirtualDirectory>
       <VirtualDirectory Name="toueris-dhmi">
-        <File Name="package/variants/toueris-dhmi/pins_arduino.h"/>
+        <File Name="duino-boards/variants/toueris-dhmi/pins_arduino.h"/>
       </VirtualDirectory>
       <VirtualDirectory Name="toueris-modbus">
-        <File Name="package/variants/toueris-modbus/pins_arduino.h"/>
+        <File Name="duino-boards/variants/toueris-modbus/pins_arduino.h"/>
       </VirtualDirectory>
     </VirtualDirectory>
     <VirtualDirectory Name="libraries">
       <VirtualDirectory Name="Ethernet">
-        <File Name="package/libraries/Ethernet/keywords.txt"/>
+        <File Name="duino-boards/libraries/Ethernet/keywords.txt"/>
         <VirtualDirectory Name="src">
-          <File Name="package/libraries/Ethernet/src/EthernetServer.cpp"/>
-          <File Name="package/libraries/Ethernet/src/EthernetClient.h"/>
-          <File Name="package/libraries/Ethernet/src/Dhcp.h"/>
-          <File Name="package/libraries/Ethernet/src/EthernetUdp.cpp"/>
-          <File Name="package/libraries/Ethernet/src/EthernetClient.cpp"/>
-          <File Name="package/libraries/Ethernet/src/Dhcp.cpp"/>
-          <File Name="package/libraries/Ethernet/src/Ethernet.cpp"/>
-          <File Name="package/libraries/Ethernet/src/Dns.h"/>
-          <File Name="package/libraries/Ethernet/src/EthernetUdp.h"/>
-          <File Name="package/libraries/Ethernet/src/Ethernet.h"/>
-          <File Name="package/libraries/Ethernet/src/EthernetServer.h"/>
-          <File Name="package/libraries/Ethernet/src/Dns.cpp"/>
+          <File Name="duino-boards/libraries/Ethernet/src/EthernetServer.cpp"/>
+          <File Name="duino-boards/libraries/Ethernet/src/EthernetClient.h"/>
+          <File Name="duino-boards/libraries/Ethernet/src/Dhcp.h"/>
+          <File Name="duino-boards/libraries/Ethernet/src/EthernetUdp.cpp"/>
+          <File Name="duino-boards/libraries/Ethernet/src/EthernetClient.cpp"/>
+          <File Name="duino-boards/libraries/Ethernet/src/Dhcp.cpp"/>
+          <File Name="duino-boards/libraries/Ethernet/src/Ethernet.cpp"/>
+          <File Name="duino-boards/libraries/Ethernet/src/Dns.h"/>
+          <File Name="duino-boards/libraries/Ethernet/src/EthernetUdp.h"/>
+          <File Name="duino-boards/libraries/Ethernet/src/Ethernet.h"/>
+          <File Name="duino-boards/libraries/Ethernet/src/EthernetServer.h"/>
+          <File Name="duino-boards/libraries/Ethernet/src/Dns.cpp"/>
           <VirtualDirectory Name="utility">
-            <File Name="package/libraries/Ethernet/src/utility/w5100.h"/>
-            <File Name="package/libraries/Ethernet/src/utility/socket.cpp"/>
-            <File Name="package/libraries/Ethernet/src/utility/socket.h"/>
-            <File Name="package/libraries/Ethernet/src/utility/w5100.cpp"/>
-            <File Name="package/libraries/Ethernet/src/utility/util.h"/>
+            <File Name="duino-boards/libraries/Ethernet/src/utility/w5100.h"/>
+            <File Name="duino-boards/libraries/Ethernet/src/utility/socket.cpp"/>
+            <File Name="duino-boards/libraries/Ethernet/src/utility/socket.h"/>
+            <File Name="duino-boards/libraries/Ethernet/src/utility/w5100.cpp"/>
+            <File Name="duino-boards/libraries/Ethernet/src/utility/util.h"/>
           </VirtualDirectory>
         </VirtualDirectory>
       </VirtualDirectory>
       <VirtualDirectory Name="Optiboot_flasher">
         <VirtualDirectory Name="src">
-          <File Name="package/libraries/Optiboot_flasher/src/optiboot.h"/>
+          <File Name="duino-boards/libraries/Optiboot_flasher/src/optiboot.h"/>
         </VirtualDirectory>
       </VirtualDirectory>
       <VirtualDirectory Name="Timer">
-        <File Name="package/libraries/Timer/keywords.txt"/>
-        <File Name="package/libraries/Timer/Readme.txt"/>
+        <File Name="duino-boards/libraries/Timer/keywords.txt"/>
+        <File Name="duino-boards/libraries/Timer/Readme.txt"/>
         <VirtualDirectory Name="src">
-          <File Name="package/libraries/Timer/src/Timer.cpp"/>
-          <File Name="package/libraries/Timer/src/Timer.h"/>
-          <File Name="package/libraries/Timer/src/Event.h"/>
-          <File Name="package/libraries/Timer/src/Event.cpp"/>
+          <File Name="duino-boards/libraries/Timer/src/Timer.cpp"/>
+          <File Name="duino-boards/libraries/Timer/src/Timer.h"/>
+          <File Name="duino-boards/libraries/Timer/src/Event.h"/>
+          <File Name="duino-boards/libraries/Timer/src/Event.cpp"/>
         </VirtualDirectory>
       </VirtualDirectory>
       <VirtualDirectory Name="Servo">
-        <File Name="package/libraries/Servo/keywords.txt"/>
-        <File Name="package/libraries/Servo/README.txt"/>
+        <File Name="duino-boards/libraries/Servo/keywords.txt"/>
+        <File Name="duino-boards/libraries/Servo/README.txt"/>
         <VirtualDirectory Name="src">
-          <File Name="package/libraries/Servo/src/Servo.h"/>
-          <File Name="package/libraries/Servo/src/Servo.cpp"/>
-          <File Name="package/libraries/Servo/src/ServoTimers.h"/>
+          <File Name="duino-boards/libraries/Servo/src/Servo.h"/>
+          <File Name="duino-boards/libraries/Servo/src/Servo.cpp"/>
+          <File Name="duino-boards/libraries/Servo/src/ServoTimers.h"/>
         </VirtualDirectory>
       </VirtualDirectory>
       <VirtualDirectory Name="SD">
-        <File Name="package/libraries/SD/keywords.txt"/>
-        <File Name="package/libraries/SD/README.txt"/>
+        <File Name="duino-boards/libraries/SD/keywords.txt"/>
+        <File Name="duino-boards/libraries/SD/README.txt"/>
         <VirtualDirectory Name="src">
-          <File Name="package/libraries/SD/src/SD.cpp"/>
-          <File Name="package/libraries/SD/src/README.txt"/>
-          <File Name="package/libraries/SD/src/File.cpp"/>
-          <File Name="package/libraries/SD/src/SD.h"/>
+          <File Name="duino-boards/libraries/SD/src/SD.cpp"/>
+          <File Name="duino-boards/libraries/SD/src/README.txt"/>
+          <File Name="duino-boards/libraries/SD/src/File.cpp"/>
+          <File Name="duino-boards/libraries/SD/src/SD.h"/>
           <VirtualDirectory Name="utility">
-            <File Name="package/libraries/SD/src/utility/Sd2Card.cpp"/>
-            <File Name="package/libraries/SD/src/utility/FatStructs.h"/>
-            <File Name="package/libraries/SD/src/utility/SdFatUtil.h"/>
-            <File Name="package/libraries/SD/src/utility/Sd2Card.h"/>
-            <File Name="package/libraries/SD/src/utility/SdVolume.cpp"/>
-            <File Name="package/libraries/SD/src/utility/SdFatmainpage.h"/>
-            <File Name="package/libraries/SD/src/utility/SdInfo.h"/>
-            <File Name="package/libraries/SD/src/utility/SdFile.cpp"/>
-            <File Name="package/libraries/SD/src/utility/SdFat.h"/>
-            <File Name="package/libraries/SD/src/utility/Sd2PinMap.h"/>
+            <File Name="duino-boards/libraries/SD/src/utility/Sd2Card.cpp"/>
+            <File Name="duino-boards/libraries/SD/src/utility/FatStructs.h"/>
+            <File Name="duino-boards/libraries/SD/src/utility/SdFatUtil.h"/>
+            <File Name="duino-boards/libraries/SD/src/utility/Sd2Card.h"/>
+            <File Name="duino-boards/libraries/SD/src/utility/SdVolume.cpp"/>
+            <File Name="duino-boards/libraries/SD/src/utility/SdFatmainpage.h"/>
+            <File Name="duino-boards/libraries/SD/src/utility/SdInfo.h"/>
+            <File Name="duino-boards/libraries/SD/src/utility/SdFile.cpp"/>
+            <File Name="duino-boards/libraries/SD/src/utility/SdFat.h"/>
+            <File Name="duino-boards/libraries/SD/src/utility/Sd2PinMap.h"/>
           </VirtualDirectory>
         </VirtualDirectory>
       </VirtualDirectory>
       <VirtualDirectory Name="SoftwareSerial">
-        <File Name="package/libraries/SoftwareSerial/keywords.txt"/>
+        <File Name="duino-boards/libraries/SoftwareSerial/keywords.txt"/>
         <VirtualDirectory Name="src">
-          <File Name="package/libraries/SoftwareSerial/src/SoftwareSerial.cpp"/>
-          <File Name="package/libraries/SoftwareSerial/src/SoftwareSerial.h"/>
+          <File Name="duino-boards/libraries/SoftwareSerial/src/SoftwareSerial.cpp"/>
+          <File Name="duino-boards/libraries/SoftwareSerial/src/SoftwareSerial.h"/>
         </VirtualDirectory>
       </VirtualDirectory>
       <VirtualDirectory Name="SPI">
-        <File Name="package/libraries/SPI/keywords.txt"/>
+        <File Name="duino-boards/libraries/SPI/keywords.txt"/>
         <VirtualDirectory Name="src">
-          <File Name="package/libraries/SPI/src/SPI.cpp"/>
-          <File Name="package/libraries/SPI/src/SPI.h"/>
+          <File Name="duino-boards/libraries/SPI/src/SPI.cpp"/>
+          <File Name="duino-boards/libraries/SPI/src/SPI.h"/>
         </VirtualDirectory>
       </VirtualDirectory>
       <VirtualDirectory Name="Wire">
-        <File Name="package/libraries/Wire/Wire.cpp"/>
-        <File Name="package/libraries/Wire/keywords.txt"/>
-        <File Name="package/libraries/Wire/Wire.h"/>
+        <File Name="duino-boards/libraries/Wire/Wire.cpp"/>
+        <File Name="duino-boards/libraries/Wire/keywords.txt"/>
+        <File Name="duino-boards/libraries/Wire/Wire.h"/>
         <VirtualDirectory Name="utility">
-          <File Name="package/libraries/Wire/utility/twi.h"/>
-          <File Name="package/libraries/Wire/utility/twi.c"/>
+          <File Name="duino-boards/libraries/Wire/utility/twi.h"/>
+          <File Name="duino-boards/libraries/Wire/utility/twi.c"/>
         </VirtualDirectory>
       </VirtualDirectory>
       <VirtualDirectory Name="AVR_examples">
-        <File Name="package/libraries/AVR_examples/keywords.txt"/>
-        <File Name="package/libraries/AVR_examples/Readme.txt"/>
+        <File Name="duino-boards/libraries/AVR_examples/keywords.txt"/>
+        <File Name="duino-boards/libraries/AVR_examples/Readme.txt"/>
         <VirtualDirectory Name="src">
-          <File Name="package/libraries/AVR_examples/src/AVR_keywords.h"/>
+          <File Name="duino-boards/libraries/AVR_examples/src/AVR_keywords.h"/>
         </VirtualDirectory>
       </VirtualDirectory>
       <VirtualDirectory Name="EEPROM">
-        <File Name="package/libraries/EEPROM/keywords.txt"/>
+        <File Name="duino-boards/libraries/EEPROM/keywords.txt"/>
         <VirtualDirectory Name="src">
-          <File Name="package/libraries/EEPROM/src/EEPROM.h"/>
+          <File Name="duino-boards/libraries/EEPROM/src/EEPROM.h"/>
         </VirtualDirectory>
       </VirtualDirectory>
     </VirtualDirectory>
     <VirtualDirectory Name="bootloaders">
-      <File Name="package/bootloaders/Makefile"/>
+      <File Name="duino-boards/bootloaders/Makefile"/>
       <VirtualDirectory Name="gmsl">
-        <File Name="package/bootloaders/gmsl/gmsl"/>
-        <File Name="package/bootloaders/gmsl/gmsl-tests"/>
-        <File Name="package/bootloaders/gmsl/Makefile"/>
-        <File Name="package/bootloaders/gmsl/README"/>
-        <File Name="package/bootloaders/gmsl/__gmsl"/>
+        <File Name="duino-boards/bootloaders/gmsl/gmsl"/>
+        <File Name="duino-boards/bootloaders/gmsl/gmsl-tests"/>
+        <File Name="duino-boards/bootloaders/gmsl/Makefile"/>
+        <File Name="duino-boards/bootloaders/gmsl/README"/>
+        <File Name="duino-boards/bootloaders/gmsl/__gmsl"/>
       </VirtualDirectory>
     </VirtualDirectory>
   </VirtualDirectory>
