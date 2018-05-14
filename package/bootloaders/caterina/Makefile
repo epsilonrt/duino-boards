@@ -31,6 +31,9 @@ PROJECT_TOPDIR = .
 # User Project
 USER_PROJECT = CATERINA
 
+# Path to the LUFA library
+LUFA_TOPDIR  = $(abspath ../../../../lufa-LUFA-111009)
+
 #-------------------------------------------------------------------------------
 #                          ~~~~Configuration~~~~
 # Chemin relatif du répertoire racine d'AVRIO
@@ -77,10 +80,10 @@ VID = 0x2341
 # official Leonardo PID
 PID = 0x0036
 
-else ifeq ($(VARIANT),TOUERIS_SLAVE)
+else ifeq ($(VARIANT),TOUERIS_MODBUS)
 #-------------------------------------------------------------------------------
 # Nom du fichier cible (sans extension).
-TARGET = caterina-toueris-slave
+TARGET = caterina-toueris-modbus
 # USB vendor ID (VID)
 # reuse of this VID by others is forbidden by USB-IF
 # epsilonrt VID (pid.codes)
@@ -103,8 +106,6 @@ endif
 
 #-------------------------------------------------------------------------------
 #                               ~~~~LUFA~~~~
-# Path to the LUFA library
-LUFA_TOPDIR  = $(abspath ./lufa-LUFA-111009)
 
 # Target board (see library "Board Types" documentation, NONE for projects not requiring
 # LUFA board drivers). If USER is selected, put custom board drivers in a directory called
@@ -168,7 +169,7 @@ DEBUG_OPT = s
 #DEBUG = ON
 
 # Affiche la ligne de compilation GCC ou non (ON/OFF)
-VIEW_GCC_LINE = ON
+#VIEW_GCC_LINE = ON
 
 # Désactive la suppression des variables et fonctions "inutiles"
 # Le linker vérifie d'une fonction ou une variable est appellée, si ce n'est pas

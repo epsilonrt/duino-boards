@@ -92,6 +92,12 @@
       <VirtualDirectory Name="standard">
         <File Name="package/variants/standard/pins_arduino.h"/>
       </VirtualDirectory>
+      <VirtualDirectory Name="toueris-dhmi">
+        <File Name="package/variants/toueris-dhmi/pins_arduino.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="toueris-modbus">
+        <File Name="package/variants/toueris-modbus/pins_arduino.h"/>
+      </VirtualDirectory>
     </VirtualDirectory>
     <VirtualDirectory Name="libraries">
       <VirtualDirectory Name="Ethernet">
@@ -214,11 +220,11 @@
   </VirtualDirectory>
   <VirtualDirectory Name="duino-boards">
     <File Name="README.md"/>
-    <File Name="package_epsilonrt_package_index.json.in"/>
     <File Name="COPYING"/>
     <File Name="Makefile"/>
     <File Name="AUTHORS"/>
     <File Name=".gitignore"/>
+    <File Name="package_epsilonrt_duino_boards_index.json.in"/>
   </VirtualDirectory>
   <Description/>
   <Dependencies/>

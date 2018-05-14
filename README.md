@@ -5,7 +5,6 @@
 ---
 Copyright © 2015-2018 Pascal JEAN, All rights reserved.
 
-
 # How to install
 
 ## Boards Manager Installation
@@ -33,18 +32,12 @@ This installation method requires Arduino IDE version 1.6.5 or greater.
 ## IDE Board options
 
 ## BOD option
-Brown out detection, or BOD for short lets the microcontroller sense the input voltage and shut down if the voltage goes below the brown out setting. To change the BOD settings you'll have to connect an ISP programmer and hit "Burn bootloader". Below is a table that shows the available BOD options:
-<br/>
 
-| ATmega1284 | Atmega644 | ATmega324 | ATmega164 | ATmega32 | ATmega16 | ATmega8535 |
-|------------|-----------|-----------|-----------|----------|----------|------------|
-| 4.3v       | 4.3v      | 4.3v      | 4.3v      | 4.0v     | 4.0v     | 4.0v       |
-| 2.7v       | 2.7v      | 2.7v      | 2.7v      | 2.7v     | 2.7v     | 2.7v       |
-| 1.8v       | 1.8v      | 1.8v      | 1.8v      | -        | -        | -          |
-| Disabled   | Disabled  | Disabled  | Disabled  | Disabled | Disabled | Disabled   |
+Brown out detection, or BOD for short lets the microcontroller sense the input voltage and shut down if the voltage goes below the brown out setting. To change the BOD settings you'll have to connect an ISP programmer and hit "Burn bootloader". Below is a table that shows the available BOD options:
 
 
 ## Link time optimization / LTO
+
 Link time optimization (LTO for short) have been supported by the IDE since v1.6.11. The LTO optimizes the code at link time, making the code (often) significantly smaller without making it "slower". In Arduino IDE 1.6.11 and newer LTO is enabled by default. I've chosen to disable this by default to make sure the core keep backward compatibility. Enabling LTO in IDE 1.6.10 and older will return an error. 
 I encourage you to try the new LTO option and see how much smaller your code gets! Note that you don't need to hit "Burn Bootloader" in order to enable LTO. Simply enable it in the "Tools" menu, and your code is ready for compilation. If you want to read more about LTO and GCC flags in general, head over to the [GNU GCC website](https://gcc.gnu.org/onlinedocs/gcc/Optimize-Options.html)!
 <br/> <br/>
@@ -58,11 +51,8 @@ Here's some numbers to convince you. These sketches were compiled for an **ATmeg
 
 ## Boards List
 
-
-### xPLBee board
-
-The [xPLBee Board](https://github.com/epsilonrt/xplbee) is a microcontroller board based on the ATMEGA1284p compatible with the Arduino IDE.
+* [xPLBee Board](https://github.com/epsilonrt/xplbee)  
+* MODBUS Slave boards from Toueris project
+* Wire HMI board from Toueris project
 
 ------
-
-

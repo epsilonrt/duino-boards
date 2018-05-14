@@ -17,9 +17,9 @@
 #ifndef _VARIANTS_H_
 #define _VARIANTS_H_
 
-#define STANDARD      0
-#define TOUERIS_DHMI  1
-#define TOUERIS_SLAVE 2
+#define STANDARD        0
+#define TOUERIS_DHMI    1
+#define TOUERIS_MODBUS  2
 
 #if VARIANT == STANDARD
 #define L_LED_DDR DDRC
@@ -38,15 +38,15 @@
 #define USBPWR_AUTOSWITCH 0
 #define USBPWR_MODE USB_CONFIG_ATTR_BUSPOWERED
 
-#elif VARIANT == TOUERIS_SLAVE
+#elif VARIANT == TOUERIS_MODBUS
 #define TX_LED_DDR DDRD
 #define TX_LED_PORT PORTD
 #define TX_LED_BIT 5
-#define TX_LED_ACT 1
+#define TX_LED_ACT 0
 #define RX_LED_DDR DDRB
 #define RX_LED_PORT PORTB
 #define RX_LED_BIT 0
-#define RX_LED_ACT 1
+#define RX_LED_ACT 0
 
 #define USBPWR_AUTODETECT 1
 #define USBPWR_AUTOSWITCH 0

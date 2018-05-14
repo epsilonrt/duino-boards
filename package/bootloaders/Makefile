@@ -2,33 +2,28 @@
 #----------------------------------------------------------------------------
 # $Id$
 
-SUBDIRS = optiboot
+all:
+	@$(MAKE) -w -C optiboot $@
+	@cp optiboot/*.hex .
+	@$(MAKE) -w -C optiboot clean
+	@$(MAKE) -w -C caterina $@
+	@cp caterina/*.hex .
+	@$(MAKE) -w -C caterina clean
+	@$(MAKE) -w -C caterina VARIANT=TOUERIS_MODBUS $@
+	@cp caterina/*.hex .
+	@$(MAKE) -w -C caterina VARIANT=TOUERIS_MODBUS clean
 
-all: $(SUBDIRS)
-clean: $(SUBDIRS)
-distclean: $(SUBDIRS)
-rebuild: $(SUBDIRS)
-lib: $(SUBDIRS)
-cleanlib: $(SUBDIRS)
-extcoff: $(SUBDIRS)
-program: $(SUBDIRS)
-debug: $(SUBDIRS)
+clean:
+	@$(MAKE) -w -C optiboot $@
+	@$(MAKE) -w -C caterina $@
+	@$(MAKE) -w -C caterina VARIANT=TOUERIS_MODBUS $@
 
-elf: $(SUBDIRS)
-hex: $(SUBDIRS)
-eep: $(SUBDIRS)
-lss: $(SUBDIRS)
-sym: $(SUBDIRS)
-har: $(SUBDIRS)
+distclean:
+	@$(MAKE) -w -C optiboot $@
+	@$(MAKE) -w -C caterina $@
+	@$(MAKE) -w -C caterina VARIANT=TOUERIS_MODBUS $@
+	@rm -f *.hex
 
-$(SUBDIRS):
-	@$(MAKE) -w -C $@ $(MAKECMDGOALS)
-ifeq ($(MAKECMDGOALS),)
-	@cp $@/*.hex .
-else 
-ifeq ($(MAKECMDGOALS),all)
-	@cp $@/*.hex .
-endif
-endif
+rebuild: clean all
 
-.PHONY: all clean distclean rebuild lib cleanlib extcoff program debug elf hex eep lss sym har $(SUBDIRS)
+.PHONY: all clean distclean rebuild 

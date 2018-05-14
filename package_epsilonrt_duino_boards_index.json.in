@@ -1,32 +1,39 @@
 {
   "packages": [
     {
-      "name": "xPLBee @VERSION@",
-      "maintainer": "epsilonrt",
-      "websiteURL": "https://github.com/epsilonrt/xplbee",
+      "name": "Duino Boards @VERSION@",
+      "maintainer": "Pascal JEAN",
+      "websiteURL": "https://github.com/epsilonrt/duino-boards",
       "email": "epsilonrt@gmail.com",
       "help": {
-        "online": "https://github.com/epsilonrt/xplbee/wiki"
+        "online": "https://github.com/epsilonrt/duino-boards/wiki"
       },
       "platforms": [
         {
-          "name": "xPLBee",
+          "name": "Duino Boards",
           "architecture": "avr",
           "version": "@VERSION@",
           "category": "Contributed",
-          "url": "https://github.com/epsilonrt/xplbee/releases/download/v@VERSION_TINY@/xplbee.tar.gz",
-          "archiveFileName": "xplbee.tar.gz",
+          "url": "https://github.com/epsilonrt/duino-boards/releases/download/v@VERSION_TINY@/duino-boards.tar.gz",
+          "archiveFileName": "duino-boards.tar.gz",
           "checksum": "SHA-256:@HASH@",
           "size": "@SIZE@",
           "boards": [
-            {"name": "xplbee"}
+            {"name": "xplbee"},
+            {"name": "touerisdhmi"},
+            {"name": "touerismb"}
           ],
           "toolsDependencies": [
             {
               "packager": "arduino",
+              "name": "avr-gcc",
+              "version": "4.9.2-atmel3.5.4-arduino2"
+            },
+            {
+              "packager": "arduino",
               "name": "avrdude",
               "version": "6.3.0-arduino9"
-            }
+            },
           ]
         }
       ],
