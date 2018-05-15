@@ -1,7 +1,7 @@
 {
   "packages": [
     {
-      "name": "Duino Boards @VERSION@",
+      "name": "DuinoBoards@VERSION@",
       "maintainer": "Pascal JEAN",
       "websiteURL": "https://github.com/epsilonrt/duino-boards",
       "email": "epsilonrt@gmail.com",

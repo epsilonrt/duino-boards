@@ -28,7 +28,6 @@
   </Plugins>
   <VirtualDirectory Name="package">
     <File Name="duino-boards/externalprogrammers.txt"/>
-    <File Name="duino-boards/platform.txt"/>
     <File Name="duino-boards/programmers.txt"/>
     <File Name="duino-boards/boards.txt"/>
     <VirtualDirectory Name="cores">
