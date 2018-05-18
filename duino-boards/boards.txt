@@ -74,8 +74,8 @@ touerisdhmi.bootloader.low_fuses=0xff
 touerisdhmi.bootloader.high_fuses=0x98
 touerisdhmi.bootloader.extended_fuses=0xcb
 touerisdhmi.bootloader.file=caterina-toueris-dhmi.hex
-touerisdhmi.bootloader.unlock_bits=0x3F
-touerisdhmi.bootloader.lock_bits=0x2F
+touerisdhmi.bootloader.unlock_bits=0xff
+touerisdhmi.bootloader.lock_bits=0xef
 
 touerisdhmi.build.mcu=atmega32u4
 touerisdhmi.build.f_cpu=16000000L
@@ -138,8 +138,8 @@ touerismb.bootloader.low_fuses=0xff
 touerismb.bootloader.high_fuses=0x98
 touerismb.bootloader.extended_fuses=0xcb
 touerismb.bootloader.file=caterina-toueris-modbus.hex
-touerismb.bootloader.unlock_bits=0x3F
-touerismb.bootloader.lock_bits=0x2F
+touerismb.bootloader.unlock_bits=0xff
+touerismb.bootloader.lock_bits=0xef
 
 touerismb.build.mcu=atmega32u4
 touerismb.build.f_cpu=16000000L
