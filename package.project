@@ -1,35 +1,310 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="package" InternalType="" Version="10.0.0">
-  <Plugins>
-    <Plugin Name="qmake">
-      <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
-    </Plugin>
-    <Plugin Name="CMakePlugin">
-      <![CDATA[[{
-  "name": "Debug",
-  "enabled": false,
-  "buildDirectory": "build",
-  "sourceDirectory": "$(ProjectPath)",
-  "generator": "",
-  "buildType": "",
-  "arguments": [],
-  "parentProject": ""
- }, {
-  "name": "Release",
-  "enabled": false,
-  "buildDirectory": "build",
-  "sourceDirectory": "$(ProjectPath)",
-  "generator": "",
-  "buildType": "",
-  "arguments": [],
-  "parentProject": ""
- }]]]>
-    </Plugin>
-  </Plugins>
-  <VirtualDirectory Name="package">
+  <VirtualDirectory Name="duino-boards">
+    <File Name="README.md"/>
+    <File Name="platform.txt.in"/>
+    <File Name="package_epsilonrt_duino_boards_index.json.in"/>
+    <File Name="Makefile"/>
+    <File Name="COPYING"/>
+    <File Name="AUTHORS"/>
+    <File Name=".gitignore"/>
     <File Name="duino-boards/externalprogrammers.txt"/>
+    <File Name="duino-boards/platform.txt"/>
     <File Name="duino-boards/programmers.txt"/>
     <File Name="duino-boards/boards.txt"/>
+    <VirtualDirectory Name="bootloaders">
+      <File Name="duino-boards/bootloaders/Makefile"/>
+      <VirtualDirectory Name="gmsl">
+        <File Name="duino-boards/bootloaders/gmsl/__gmsl"/>
+        <File Name="duino-boards/bootloaders/gmsl/README"/>
+        <File Name="duino-boards/bootloaders/gmsl/Makefile"/>
+        <File Name="duino-boards/bootloaders/gmsl/gmsl"/>
+        <File Name="duino-boards/bootloaders/gmsl/gmsl-tests"/>
+      </VirtualDirectory>
+    </VirtualDirectory>
+    <VirtualDirectory Name="variants">
+      <VirtualDirectory Name="toueris-dhmi">
+        <File Name="duino-boards/variants/toueris-dhmi/pins_arduino.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="toueris-modbus">
+        <File Name="duino-boards/variants/toueris-modbus/pins_arduino.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="standard">
+        <File Name="duino-boards/variants/standard/pins_arduino.h"/>
+      </VirtualDirectory>
+    </VirtualDirectory>
+    <VirtualDirectory Name="libraries">
+      <VirtualDirectory Name="Ethernet">
+        <File Name="duino-boards/libraries/Ethernet/keywords.txt"/>
+        <VirtualDirectory Name="src">
+          <File Name="duino-boards/libraries/Ethernet/src/EthernetServer.cpp"/>
+          <File Name="duino-boards/libraries/Ethernet/src/EthernetClient.h"/>
+          <File Name="duino-boards/libraries/Ethernet/src/Dhcp.h"/>
+          <File Name="duino-boards/libraries/Ethernet/src/EthernetUdp.cpp"/>
+          <File Name="duino-boards/libraries/Ethernet/src/EthernetClient.cpp"/>
+          <File Name="duino-boards/libraries/Ethernet/src/Dhcp.cpp"/>
+          <File Name="duino-boards/libraries/Ethernet/src/Ethernet.cpp"/>
+          <File Name="duino-boards/libraries/Ethernet/src/Dns.h"/>
+          <File Name="duino-boards/libraries/Ethernet/src/EthernetUdp.h"/>
+          <File Name="duino-boards/libraries/Ethernet/src/Ethernet.h"/>
+          <File Name="duino-boards/libraries/Ethernet/src/EthernetServer.h"/>
+          <File Name="duino-boards/libraries/Ethernet/src/Dns.cpp"/>
+          <VirtualDirectory Name="utility">
+            <File Name="duino-boards/libraries/Ethernet/src/utility/w5100.h"/>
+            <File Name="duino-boards/libraries/Ethernet/src/utility/socket.cpp"/>
+            <File Name="duino-boards/libraries/Ethernet/src/utility/socket.h"/>
+            <File Name="duino-boards/libraries/Ethernet/src/utility/w5100.cpp"/>
+            <File Name="duino-boards/libraries/Ethernet/src/utility/util.h"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+        <VirtualDirectory Name="examples">
+          <VirtualDirectory Name="BarometricPressureWebServer">
+            <File Name="duino-boards/libraries/Ethernet/examples/BarometricPressureWebServer/BarometricPressureWebServer.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="AdvancedChatServer">
+            <File Name="duino-boards/libraries/Ethernet/examples/AdvancedChatServer/AdvancedChatServer.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="UdpNtpClient">
+            <File Name="duino-boards/libraries/Ethernet/examples/UdpNtpClient/UdpNtpClient.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="WebClient">
+            <File Name="duino-boards/libraries/Ethernet/examples/WebClient/WebClient.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="DhcpChatServer">
+            <File Name="duino-boards/libraries/Ethernet/examples/DhcpChatServer/DhcpChatServer.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="TelnetClient">
+            <File Name="duino-boards/libraries/Ethernet/examples/TelnetClient/TelnetClient.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="WebServer">
+            <File Name="duino-boards/libraries/Ethernet/examples/WebServer/WebServer.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="WebClientRepeating">
+            <File Name="duino-boards/libraries/Ethernet/examples/WebClientRepeating/WebClientRepeating.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="UDPSendReceiveString">
+            <File Name="duino-boards/libraries/Ethernet/examples/UDPSendReceiveString/UDPSendReceiveString.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="ChatServer">
+            <File Name="duino-boards/libraries/Ethernet/examples/ChatServer/ChatServer.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="DhcpAddressPrinter">
+            <File Name="duino-boards/libraries/Ethernet/examples/DhcpAddressPrinter/DhcpAddressPrinter.ino"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="Optiboot_flasher">
+        <VirtualDirectory Name="src">
+          <File Name="duino-boards/libraries/Optiboot_flasher/src/optiboot.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="examples">
+          <VirtualDirectory Name="SerialReadWrite">
+            <File Name="duino-boards/libraries/Optiboot_flasher/examples/SerialReadWrite/SerialReadWrite.ino"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="Timer">
+        <File Name="duino-boards/libraries/Timer/keywords.txt"/>
+        <File Name="duino-boards/libraries/Timer/Readme.txt"/>
+        <VirtualDirectory Name="src">
+          <File Name="duino-boards/libraries/Timer/src/Timer.cpp"/>
+          <File Name="duino-boards/libraries/Timer/src/Timer.h"/>
+          <File Name="duino-boards/libraries/Timer/src/Event.h"/>
+          <File Name="duino-boards/libraries/Timer/src/Event.cpp"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="examples">
+          <VirtualDirectory Name="TimerTest">
+            <File Name="duino-boards/libraries/Timer/examples/TimerTest/TimerTest.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="Pin_high_10_minutes">
+            <File Name="duino-boards/libraries/Timer/examples/Pin_high_10_minutes/Pin_high_10_minutes.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="Multitasking">
+            <File Name="duino-boards/libraries/Timer/examples/Multitasking/Multitasking.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="Events">
+            <File Name="duino-boards/libraries/Timer/examples/Events/Events.ino"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="Servo">
+        <File Name="duino-boards/libraries/Servo/keywords.txt"/>
+        <File Name="duino-boards/libraries/Servo/README.txt"/>
+        <VirtualDirectory Name="src">
+          <File Name="duino-boards/libraries/Servo/src/Servo.h"/>
+          <File Name="duino-boards/libraries/Servo/src/Servo.cpp"/>
+          <File Name="duino-boards/libraries/Servo/src/ServoTimers.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="examples">
+          <VirtualDirectory Name="Knob">
+            <File Name="duino-boards/libraries/Servo/examples/Knob/Knob.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="Sweep">
+            <File Name="duino-boards/libraries/Servo/examples/Sweep/Sweep.ino"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="SD">
+        <File Name="duino-boards/libraries/SD/keywords.txt"/>
+        <File Name="duino-boards/libraries/SD/README.txt"/>
+        <VirtualDirectory Name="src">
+          <File Name="duino-boards/libraries/SD/src/SD.cpp"/>
+          <File Name="duino-boards/libraries/SD/src/README.txt"/>
+          <File Name="duino-boards/libraries/SD/src/File.cpp"/>
+          <File Name="duino-boards/libraries/SD/src/SD.h"/>
+          <VirtualDirectory Name="utility">
+            <File Name="duino-boards/libraries/SD/src/utility/Sd2Card.cpp"/>
+            <File Name="duino-boards/libraries/SD/src/utility/FatStructs.h"/>
+            <File Name="duino-boards/libraries/SD/src/utility/SdFatUtil.h"/>
+            <File Name="duino-boards/libraries/SD/src/utility/Sd2Card.h"/>
+            <File Name="duino-boards/libraries/SD/src/utility/SdVolume.cpp"/>
+            <File Name="duino-boards/libraries/SD/src/utility/SdFatmainpage.h"/>
+            <File Name="duino-boards/libraries/SD/src/utility/SdInfo.h"/>
+            <File Name="duino-boards/libraries/SD/src/utility/SdFile.cpp"/>
+            <File Name="duino-boards/libraries/SD/src/utility/SdFat.h"/>
+            <File Name="duino-boards/libraries/SD/src/utility/Sd2PinMap.h"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+        <VirtualDirectory Name="examples">
+          <VirtualDirectory Name="Files">
+            <File Name="duino-boards/libraries/SD/examples/Files/Files.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="ReadWrite">
+            <File Name="duino-boards/libraries/SD/examples/ReadWrite/ReadWrite.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="DumpFile">
+            <File Name="duino-boards/libraries/SD/examples/DumpFile/DumpFile.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="listfiles">
+            <File Name="duino-boards/libraries/SD/examples/listfiles/listfiles.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="CardInfo">
+            <File Name="duino-boards/libraries/SD/examples/CardInfo/CardInfo.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="Datalogger">
+            <File Name="duino-boards/libraries/SD/examples/Datalogger/Datalogger.ino"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="SoftwareSerial">
+        <File Name="duino-boards/libraries/SoftwareSerial/keywords.txt"/>
+        <VirtualDirectory Name="src">
+          <File Name="duino-boards/libraries/SoftwareSerial/src/SoftwareSerial.cpp"/>
+          <File Name="duino-boards/libraries/SoftwareSerial/src/SoftwareSerial.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="examples">
+          <VirtualDirectory Name="TwoPortReceive">
+            <File Name="duino-boards/libraries/SoftwareSerial/examples/TwoPortReceive/TwoPortReceive.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="SoftwareSerialExample">
+            <File Name="duino-boards/libraries/SoftwareSerial/examples/SoftwareSerialExample/SoftwareSerialExample.ino"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="SPI">
+        <File Name="duino-boards/libraries/SPI/keywords.txt"/>
+        <VirtualDirectory Name="src">
+          <File Name="duino-boards/libraries/SPI/src/SPI.cpp"/>
+          <File Name="duino-boards/libraries/SPI/src/SPI.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="examples">
+          <VirtualDirectory Name="BarometricPressureSensor">
+            <File Name="duino-boards/libraries/SPI/examples/BarometricPressureSensor/BarometricPressureSensor.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="DigitalPotControl">
+            <File Name="duino-boards/libraries/SPI/examples/DigitalPotControl/DigitalPotControl.ino"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="Wire">
+        <File Name="duino-boards/libraries/Wire/Wire.cpp"/>
+        <File Name="duino-boards/libraries/Wire/keywords.txt"/>
+        <File Name="duino-boards/libraries/Wire/Wire.h"/>
+        <VirtualDirectory Name="utility">
+          <File Name="duino-boards/libraries/Wire/utility/twi.h"/>
+          <File Name="duino-boards/libraries/Wire/utility/twi.c"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="examples">
+          <VirtualDirectory Name="master_reader">
+            <File Name="duino-boards/libraries/Wire/examples/master_reader/master_reader.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="slave_sender">
+            <File Name="duino-boards/libraries/Wire/examples/slave_sender/slave_sender.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="digital_potentiometer">
+            <File Name="duino-boards/libraries/Wire/examples/digital_potentiometer/digital_potentiometer.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="i2c_scanner">
+            <File Name="duino-boards/libraries/Wire/examples/i2c_scanner/i2c_scanner.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="master_writer">
+            <File Name="duino-boards/libraries/Wire/examples/master_writer/master_writer.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="slave_receiver">
+            <File Name="duino-boards/libraries/Wire/examples/slave_receiver/slave_receiver.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="SFRRanger_reader">
+            <File Name="duino-boards/libraries/Wire/examples/SFRRanger_reader/SFRRanger_reader.ino"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="AVR_examples">
+        <File Name="duino-boards/libraries/AVR_examples/keywords.txt"/>
+        <File Name="duino-boards/libraries/AVR_examples/Readme.txt"/>
+        <VirtualDirectory Name="src">
+          <File Name="duino-boards/libraries/AVR_examples/src/AVR_keywords.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="examples">
+          <VirtualDirectory Name="Blink_using_Timer0">
+            <File Name="duino-boards/libraries/AVR_examples/examples/Blink_using_Timer0/Blink_using_Timer0.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="Watch_dog_timer">
+            <File Name="duino-boards/libraries/AVR_examples/examples/Watch_dog_timer/Watch_dog_timer.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="Read_port_write_port">
+            <File Name="duino-boards/libraries/AVR_examples/examples/Read_port_write_port/Read_port_write_port.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="Measure_period_length">
+            <File Name="duino-boards/libraries/AVR_examples/examples/Measure_period_length/Measure_period_length.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="Blink">
+            <File Name="duino-boards/libraries/AVR_examples/examples/Blink/Blink.ino"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="EEPROM">
+        <File Name="duino-boards/libraries/EEPROM/keywords.txt"/>
+        <VirtualDirectory Name="src">
+          <File Name="duino-boards/libraries/EEPROM/src/EEPROM.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="examples">
+          <VirtualDirectory Name="eeprom_clear">
+            <File Name="duino-boards/libraries/EEPROM/examples/eeprom_clear/eeprom_clear.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="eeprom_get">
+            <File Name="duino-boards/libraries/EEPROM/examples/eeprom_get/eeprom_get.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="eeprom_update">
+            <File Name="duino-boards/libraries/EEPROM/examples/eeprom_update/eeprom_update.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="eeprom_crc">
+            <File Name="duino-boards/libraries/EEPROM/examples/eeprom_crc/eeprom_crc.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="eeprom_write">
+            <File Name="duino-boards/libraries/EEPROM/examples/eeprom_write/eeprom_write.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="eeprom_read">
+            <File Name="duino-boards/libraries/EEPROM/examples/eeprom_read/eeprom_read.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="eeprom_iteration">
+            <File Name="duino-boards/libraries/EEPROM/examples/eeprom_iteration/eeprom_iteration.ino"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="eeprom_put">
+            <File Name="duino-boards/libraries/EEPROM/examples/eeprom_put/eeprom_put.ino"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+      </VirtualDirectory>
+    </VirtualDirectory>
     <VirtualDirectory Name="cores">
       <VirtualDirectory Name="MightyCore">
         <File Name="duino-boards/cores/MightyCore/wiring.c"/>
@@ -86,140 +361,6 @@
           <File Name="duino-boards/cores/MightyCore/avr-libc/stdlib_private.h"/>
         </VirtualDirectory>
       </VirtualDirectory>
-    </VirtualDirectory>
-    <VirtualDirectory Name="variants">
-      <VirtualDirectory Name="standard">
-        <File Name="duino-boards/variants/standard/pins_arduino.h"/>
-      </VirtualDirectory>
-      <VirtualDirectory Name="toueris-dhmi">
-        <File Name="duino-boards/variants/toueris-dhmi/pins_arduino.h"/>
-      </VirtualDirectory>
-      <VirtualDirectory Name="toueris-modbus">
-        <File Name="duino-boards/variants/toueris-modbus/pins_arduino.h"/>
-      </VirtualDirectory>
-    </VirtualDirectory>
-    <VirtualDirectory Name="libraries">
-      <VirtualDirectory Name="Ethernet">
-        <File Name="duino-boards/libraries/Ethernet/keywords.txt"/>
-        <VirtualDirectory Name="src">
-          <File Name="duino-boards/libraries/Ethernet/src/EthernetServer.cpp"/>
-          <File Name="duino-boards/libraries/Ethernet/src/EthernetClient.h"/>
-          <File Name="duino-boards/libraries/Ethernet/src/Dhcp.h"/>
-          <File Name="duino-boards/libraries/Ethernet/src/EthernetUdp.cpp"/>
-          <File Name="duino-boards/libraries/Ethernet/src/EthernetClient.cpp"/>
-          <File Name="duino-boards/libraries/Ethernet/src/Dhcp.cpp"/>
-          <File Name="duino-boards/libraries/Ethernet/src/Ethernet.cpp"/>
-          <File Name="duino-boards/libraries/Ethernet/src/Dns.h"/>
-          <File Name="duino-boards/libraries/Ethernet/src/EthernetUdp.h"/>
-          <File Name="duino-boards/libraries/Ethernet/src/Ethernet.h"/>
-          <File Name="duino-boards/libraries/Ethernet/src/EthernetServer.h"/>
-          <File Name="duino-boards/libraries/Ethernet/src/Dns.cpp"/>
-          <VirtualDirectory Name="utility">
-            <File Name="duino-boards/libraries/Ethernet/src/utility/w5100.h"/>
-            <File Name="duino-boards/libraries/Ethernet/src/utility/socket.cpp"/>
-            <File Name="duino-boards/libraries/Ethernet/src/utility/socket.h"/>
-            <File Name="duino-boards/libraries/Ethernet/src/utility/w5100.cpp"/>
-            <File Name="duino-boards/libraries/Ethernet/src/utility/util.h"/>
-          </VirtualDirectory>
-        </VirtualDirectory>
-      </VirtualDirectory>
-      <VirtualDirectory Name="Optiboot_flasher">
-        <VirtualDirectory Name="src">
-          <File Name="duino-boards/libraries/Optiboot_flasher/src/optiboot.h"/>
-        </VirtualDirectory>
-      </VirtualDirectory>
-      <VirtualDirectory Name="Timer">
-        <File Name="duino-boards/libraries/Timer/keywords.txt"/>
-        <File Name="duino-boards/libraries/Timer/Readme.txt"/>
-        <VirtualDirectory Name="src">
-          <File Name="duino-boards/libraries/Timer/src/Timer.cpp"/>
-          <File Name="duino-boards/libraries/Timer/src/Timer.h"/>
-          <File Name="duino-boards/libraries/Timer/src/Event.h"/>
-          <File Name="duino-boards/libraries/Timer/src/Event.cpp"/>
-        </VirtualDirectory>
-      </VirtualDirectory>
-      <VirtualDirectory Name="Servo">
-        <File Name="duino-boards/libraries/Servo/keywords.txt"/>
-        <File Name="duino-boards/libraries/Servo/README.txt"/>
-        <VirtualDirectory Name="src">
-          <File Name="duino-boards/libraries/Servo/src/Servo.h"/>
-          <File Name="duino-boards/libraries/Servo/src/Servo.cpp"/>
-          <File Name="duino-boards/libraries/Servo/src/ServoTimers.h"/>
-        </VirtualDirectory>
-      </VirtualDirectory>
-      <VirtualDirectory Name="SD">
-        <File Name="duino-boards/libraries/SD/keywords.txt"/>
-        <File Name="duino-boards/libraries/SD/README.txt"/>
-        <VirtualDirectory Name="src">
-          <File Name="duino-boards/libraries/SD/src/SD.cpp"/>
-          <File Name="duino-boards/libraries/SD/src/README.txt"/>
-          <File Name="duino-boards/libraries/SD/src/File.cpp"/>
-          <File Name="duino-boards/libraries/SD/src/SD.h"/>
-          <VirtualDirectory Name="utility">
-            <File Name="duino-boards/libraries/SD/src/utility/Sd2Card.cpp"/>
-            <File Name="duino-boards/libraries/SD/src/utility/FatStructs.h"/>
-            <File Name="duino-boards/libraries/SD/src/utility/SdFatUtil.h"/>
-            <File Name="duino-boards/libraries/SD/src/utility/Sd2Card.h"/>
-            <File Name="duino-boards/libraries/SD/src/utility/SdVolume.cpp"/>
-            <File Name="duino-boards/libraries/SD/src/utility/SdFatmainpage.h"/>
-            <File Name="duino-boards/libraries/SD/src/utility/SdInfo.h"/>
-            <File Name="duino-boards/libraries/SD/src/utility/SdFile.cpp"/>
-            <File Name="duino-boards/libraries/SD/src/utility/SdFat.h"/>
-            <File Name="duino-boards/libraries/SD/src/utility/Sd2PinMap.h"/>
-          </VirtualDirectory>
-        </VirtualDirectory>
-      </VirtualDirectory>
-      <VirtualDirectory Name="SoftwareSerial">
-        <File Name="duino-boards/libraries/SoftwareSerial/keywords.txt"/>
-        <VirtualDirectory Name="src">
-          <File Name="duino-boards/libraries/SoftwareSerial/src/SoftwareSerial.cpp"/>
-          <File Name="duino-boards/libraries/SoftwareSerial/src/SoftwareSerial.h"/>
-        </VirtualDirectory>
-      </VirtualDirectory>
-      <VirtualDirectory Name="SPI">
-        <File Name="duino-boards/libraries/SPI/keywords.txt"/>
-        <VirtualDirectory Name="src">
-          <File Name="duino-boards/libraries/SPI/src/SPI.cpp"/>
-          <File Name="duino-boards/libraries/SPI/src/SPI.h"/>
-        </VirtualDirectory>
-      </VirtualDirectory>
-      <VirtualDirectory Name="Wire">
-        <File Name="duino-boards/libraries/Wire/Wire.cpp"/>
-        <File Name="duino-boards/libraries/Wire/keywords.txt"/>
-        <File Name="duino-boards/libraries/Wire/Wire.h"/>
-        <VirtualDirectory Name="utility">
-          <File Name="duino-boards/libraries/Wire/utility/twi.h"/>
-          <File Name="duino-boards/libraries/Wire/utility/twi.c"/>
-        </VirtualDirectory>
-      </VirtualDirectory>
-      <VirtualDirectory Name="AVR_examples">
-        <File Name="duino-boards/libraries/AVR_examples/keywords.txt"/>
-        <File Name="duino-boards/libraries/AVR_examples/Readme.txt"/>
-        <VirtualDirectory Name="src">
-          <File Name="duino-boards/libraries/AVR_examples/src/AVR_keywords.h"/>
-        </VirtualDirectory>
-      </VirtualDirectory>
-      <VirtualDirectory Name="EEPROM">
-        <File Name="duino-boards/libraries/EEPROM/keywords.txt"/>
-        <VirtualDirectory Name="src">
-          <File Name="duino-boards/libraries/EEPROM/src/EEPROM.h"/>
-        </VirtualDirectory>
-      </VirtualDirectory>
-    </VirtualDirectory>
-    <VirtualDirectory Name="bootloaders">
-      <File Name="duino-boards/bootloaders/Makefile"/>
-      <VirtualDirectory Name="gmsl">
-        <File Name="duino-boards/bootloaders/gmsl/gmsl"/>
-        <File Name="duino-boards/bootloaders/gmsl/gmsl-tests"/>
-        <File Name="duino-boards/bootloaders/gmsl/Makefile"/>
-        <File Name="duino-boards/bootloaders/gmsl/README"/>
-        <File Name="duino-boards/bootloaders/gmsl/__gmsl"/>
-      </VirtualDirectory>
-    </VirtualDirectory>
-  </VirtualDirectory>
-  <VirtualDirectory Name="duino-boards">
-    <File Name="platform.txt.in"/>
-    <VirtualDirectory Name="cores">
       <VirtualDirectory Name="arduino">
         <File Name="duino-boards/cores/arduino/wiring.c"/>
         <File Name="duino-boards/cores/arduino/Stream.h"/>
@@ -266,13 +407,33 @@
         <File Name="duino-boards/cores/arduino/IPAddress.cpp"/>
       </VirtualDirectory>
     </VirtualDirectory>
-    <File Name="README.md"/>
-    <File Name="COPYING"/>
-    <File Name="Makefile"/>
-    <File Name="AUTHORS"/>
-    <File Name=".gitignore"/>
-    <File Name="package_epsilonrt_duino_boards_index.json.in"/>
   </VirtualDirectory>
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
+    </Plugin>
+    <Plugin Name="CMakePlugin">
+      <![CDATA[[{
+  "name": "Debug",
+  "enabled": false,
+  "buildDirectory": "build",
+  "sourceDirectory": "$(ProjectPath)",
+  "generator": "",
+  "buildType": "",
+  "arguments": [],
+  "parentProject": ""
+ }, {
+  "name": "Release",
+  "enabled": false,
+  "buildDirectory": "build",
+  "sourceDirectory": "$(ProjectPath)",
+  "generator": "",
+  "buildType": "",
+  "arguments": [],
+  "parentProject": ""
+ }]]]>
+    </Plugin>
+  </Plugins>
   <Description/>
   <Dependencies/>
   <Settings Type="Executable">
