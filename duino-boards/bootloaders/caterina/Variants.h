@@ -43,10 +43,14 @@
 #define TX_LED_PORT PORTD
 #define TX_LED_BIT 5
 #define TX_LED_ACT 0
-#define RX_LED_DDR DDRB
-#define RX_LED_PORT PORTB
-#define RX_LED_BIT 0
+#define RX_LED_DDR DDRD
+#define RX_LED_PORT PORTD
+#define RX_LED_BIT 5
 #define RX_LED_ACT 0
+#define L_LED_DDR DDRB
+#define L_LED_PORT PORTB
+#define L_LED_BIT 0
+#define L_LED_ACT 0
 
 #define USBPWR_AUTODETECT 1
 #define USBPWR_AUTOSWITCH 0

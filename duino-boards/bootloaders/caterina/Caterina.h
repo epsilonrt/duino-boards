@@ -90,7 +90,6 @@ LED_SETUP (void) {
 #endif
 #define L_LED_TOGGLE()  L_LED_PORT ^= (1<<L_LED_BIT)
 #else
-#define LED_SETUP()
 #define L_LED_OFF()
 #define L_LED_ON()
 #define L_LED_TOGGLE()

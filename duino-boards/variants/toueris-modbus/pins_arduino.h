@@ -103,8 +103,8 @@
 static const uint8_t SDA = PIN_WIRE_SDA;
 static const uint8_t SCL = PIN_WIRE_SCL;
 
-#define LED_BUILTIN 22
-#define LED_BUILTIN_RX 17
+#define LED_BUILTIN 17
+#define LED_BUILTIN_RX 30 // RX/TX on same pin
 #define LED_BUILTIN_TX 30
 
 // Map SPI port to 'new' pins D14..D17
