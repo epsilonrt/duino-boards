@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="package" Database="" Version="10.0.0">
   <Project Name="bootloader_optiboot" Path="duino-boards/bootloaders/optiboot/bootloader_optiboot.project" Active="No"/>
-  <Project Name="bootloader_caterina" Path="duino-boards/bootloaders/caterina/bootloader_caterina.project" Active="Yes"/>
-  <Project Name="package" Path="package.project" Active="No"/>
+  <Project Name="bootloader_caterina" Path="duino-boards/bootloaders/caterina/bootloader_caterina.project" Active="No"/>
+  <Project Name="package" Path="package.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="no">
       <Environment/>

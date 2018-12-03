@@ -17,8 +17,8 @@ distclean:
 	@rm -f duino-boards.tar.gz
 
 version: duino-boards.tar.gz
-	$(eval VERSION_TINY=$(shell git-version -t))
-	$(eval VERSION=$(VERSION_TINY).$(shell git-version -p))
+	$(eval VERSION_TINY=$(shell bin/git-version -t))
+	$(eval VERSION=$(VERSION_TINY).$(shell bin/git-version -p))
 	@echo Package Version: $(VERSION)
 
 hash: duino-boards.tar.gz
