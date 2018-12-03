@@ -20,8 +20,9 @@
           "size": "@SIZE@",
           "boards": [
             {"name": "xplbee"},
-            {"name": "touerisdhmi"},
+            {"name": "hmi4dinbox"},
             {"name": "touerismb"}
+            {"name": "pointcastmb"}
           ],
           "toolsDependencies": [
             {

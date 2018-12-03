@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="package" InternalType="" Version="10.0.0">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
+    </Plugin>
+    <Plugin Name="CMakePlugin">
+      <![CDATA[[{
+  "name": "Debug",
+  "enabled": false,
+  "buildDirectory": "build",
+  "sourceDirectory": "$(ProjectPath)",
+  "generator": "",
+  "buildType": "",
+  "arguments": [],
+  "parentProject": ""
+ }, {
+  "name": "Release",
+  "enabled": false,
+  "buildDirectory": "build",
+  "sourceDirectory": "$(ProjectPath)",
+  "generator": "",
+  "buildType": "",
+  "arguments": [],
+  "parentProject": ""
+ }]]]>
+    </Plugin>
+  </Plugins>
   <VirtualDirectory Name="duino-boards">
     <File Name="README.md"/>
     <File Name="platform.txt.in"/>
@@ -23,14 +49,17 @@
       </VirtualDirectory>
     </VirtualDirectory>
     <VirtualDirectory Name="variants">
-      <VirtualDirectory Name="toueris-dhmi">
-        <File Name="duino-boards/variants/toueris-dhmi/pins_arduino.h"/>
-      </VirtualDirectory>
       <VirtualDirectory Name="toueris-modbus">
         <File Name="duino-boards/variants/toueris-modbus/pins_arduino.h"/>
       </VirtualDirectory>
       <VirtualDirectory Name="standard">
         <File Name="duino-boards/variants/standard/pins_arduino.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="hmi4dinbox">
+        <File Name="duino-boards/variants/hmi4dinbox/pins_arduino.h"/>
+      </VirtualDirectory>
+      <VirtualDirectory Name="pointcast-modbus">
+        <File Name="duino-boards/variants/pointcast-modbus/pins_arduino.h"/>
       </VirtualDirectory>
     </VirtualDirectory>
     <VirtualDirectory Name="libraries">
@@ -408,32 +437,6 @@
       </VirtualDirectory>
     </VirtualDirectory>
   </VirtualDirectory>
-  <Plugins>
-    <Plugin Name="qmake">
-      <![CDATA[00020001N0005Debug0000000000000001N0007Release000000000000]]>
-    </Plugin>
-    <Plugin Name="CMakePlugin">
-      <![CDATA[[{
-  "name": "Debug",
-  "enabled": false,
-  "buildDirectory": "build",
-  "sourceDirectory": "$(ProjectPath)",
-  "generator": "",
-  "buildType": "",
-  "arguments": [],
-  "parentProject": ""
- }, {
-  "name": "Release",
-  "enabled": false,
-  "buildDirectory": "build",
-  "sourceDirectory": "$(ProjectPath)",
-  "generator": "",
-  "buildType": "",
-  "arguments": [],
-  "parentProject": ""
- }]]]>
-    </Plugin>
-  </Plugins>
   <Description/>
   <Dependencies/>
   <Settings Type="Executable">

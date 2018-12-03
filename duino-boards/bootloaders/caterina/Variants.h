@@ -18,8 +18,9 @@
 #define _VARIANTS_H_
 
 #define STANDARD        0
-#define TOUERIS_DHMI    1
+#define HMI4DINBOX    1
 #define TOUERIS_MODBUS  2
+#define POINTCAST_MODBUS  3
 
 #if VARIANT == STANDARD
 #define L_LED_DDR DDRC
@@ -57,7 +58,26 @@
 #define USBPWR_MODE USB_CONFIG_ATTR_SELFPOWERED
 #define USBPWR_AD_CHAN 0
 
-#elif VARIANT == TOUERIS_DHMI
+#elif VARIANT == POINTCAST_MODBUS
+#define TX_LED_DDR DDRD
+#define TX_LED_PORT PORTD
+#define TX_LED_BIT 5
+#define TX_LED_ACT 0
+#define RX_LED_DDR DDRD
+#define RX_LED_PORT PORTD
+#define RX_LED_BIT 5
+#define RX_LED_ACT 0
+#define L_LED_DDR DDRB
+#define L_LED_PORT PORTB
+#define L_LED_BIT 0
+#define L_LED_ACT 0
+
+#define USBPWR_AUTODETECT 1
+#define USBPWR_AUTOSWITCH 0
+#define USBPWR_MODE USB_CONFIG_ATTR_SELFPOWERED
+#define USBPWR_AD_CHAN 0
+
+#elif VARIANT == HMI4DINBOX
 #define L_LED_DDR DDRD
 #define L_LED_PORT PORTD
 #define L_LED_BIT 7

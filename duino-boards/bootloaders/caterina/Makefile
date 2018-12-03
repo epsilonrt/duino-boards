@@ -44,7 +44,7 @@ AVRIO_TOPDIR = $(abspath $(AVRIO_ROOT))
 # la carte dans le répertoire où se trouve ce Makefile !
 BOARD = DUINO_M32U4
 
-VARIANT ?= TOUERIS_DHMI
+VARIANT ?= HMI4DINBOX
 
 # Permet de générer un fichier version-git.h permettant de récupérer les informations sur la version
 GIT_VERSION = OFF
@@ -64,10 +64,10 @@ VID = 0x2341
 # official Leonardo PID
 PID = 0x0036
 
-else ifeq ($(VARIANT),TOUERIS_DHMI)
+else ifeq ($(VARIANT),HMI4DINBOX)
 #-------------------------------------------------------------------------------
 # Nom du fichier cible (sans extension).
-TARGET = caterina-toueris-dhmi
+TARGET = caterina-hmi4dinbox
 # USB vendor ID (VID)
 # reuse of this VID by others is forbidden by USB-IF
 # epsilonrt VID (pid.codes)
@@ -84,6 +84,23 @@ else ifeq ($(VARIANT),TOUERIS_MODBUS)
 #-------------------------------------------------------------------------------
 # Nom du fichier cible (sans extension).
 TARGET = caterina-toueris-modbus
+# USB vendor ID (VID)
+# reuse of this VID by others is forbidden by USB-IF
+# epsilonrt VID (pid.codes)
+#VID = 0x1209
+# official Arduino LLC VID
+VID = 0x2341
+# USB product ID (PID)
+# epsilonrt Toueris SLAVE PID
+#PID = 0x3004
+# official Leonardo PID
+PID = 0x0036
+
+else ifeq ($(VARIANT),POINTCAST_MODBUS)
+
+#-------------------------------------------------------------------------------
+# Nom du fichier cible (sans extension).
+TARGET = caterina-pointcast-modbus
 # USB vendor ID (VID)
 # reuse of this VID by others is forbidden by USB-IF
 # epsilonrt VID (pid.codes)

@@ -56,67 +56,67 @@ xplbee.menu.LTO.Os_flto.ltoarcmd=avr-gcc-ar
 
 ##############################################################
 
-touerisdhmi.name=Toueris Wire HMI
-touerisdhmi.vid.0=0x2341
-touerisdhmi.pid.0=0x0036
+hmi4dinbox.name=Him4DinBox HMI
+hmi4dinbox.vid.0=0x2341
+hmi4dinbox.pid.0=0x0036
 
-touerisdhmi.upload.tool=avrdude
-touerisdhmi.upload.protocol=avr109
-touerisdhmi.upload.maximum_size=28672
-touerisdhmi.upload.maximum_data_size=2560
-touerisdhmi.upload.speed=57600
-touerisdhmi.upload.disable_flushing=true
-touerisdhmi.upload.use_1200bps_touch=true
-touerisdhmi.upload.wait_for_upload_port=true
+hmi4dinbox.upload.tool=avrdude
+hmi4dinbox.upload.protocol=avr109
+hmi4dinbox.upload.maximum_size=28672
+hmi4dinbox.upload.maximum_data_size=2560
+hmi4dinbox.upload.speed=57600
+hmi4dinbox.upload.disable_flushing=true
+hmi4dinbox.upload.use_1200bps_touch=true
+hmi4dinbox.upload.wait_for_upload_port=true
 
-touerisdhmi.bootloader.tool=avrdude
-touerisdhmi.bootloader.low_fuses=0xff
-touerisdhmi.bootloader.high_fuses=0x98
-touerisdhmi.bootloader.extended_fuses=0xcb
-touerisdhmi.bootloader.file=caterina-toueris-dhmi.hex
-touerisdhmi.bootloader.unlock_bits=0xff
-touerisdhmi.bootloader.lock_bits=0xef
+hmi4dinbox.bootloader.tool=avrdude
+hmi4dinbox.bootloader.low_fuses=0xff
+hmi4dinbox.bootloader.high_fuses=0x98
+hmi4dinbox.bootloader.extended_fuses=0xcb
+hmi4dinbox.bootloader.file=caterina-hmi4dinbox.hex
+hmi4dinbox.bootloader.unlock_bits=0xff
+hmi4dinbox.bootloader.lock_bits=0xef
 
-touerisdhmi.build.mcu=atmega32u4
-touerisdhmi.build.f_cpu=16000000L
-touerisdhmi.build.vid=0x2341
-touerisdhmi.build.pid=0x8036
-touerisdhmi.build.usb_product="Arduino Leonardo"
-touerisdhmi.build.board=AVR_LEONARDO
-touerisdhmi.build.core=arduino
-touerisdhmi.build.variant=toueris-dhmi
-touerisdhmi.build.extra_flags={build.usb_flags}
+hmi4dinbox.build.mcu=atmega32u4
+hmi4dinbox.build.f_cpu=16000000L
+hmi4dinbox.build.vid=0x2341
+hmi4dinbox.build.pid=0x8036
+hmi4dinbox.build.usb_product="Arduino Leonardo"
+hmi4dinbox.build.board=AVR_LEONARDO
+hmi4dinbox.build.core=arduino
+hmi4dinbox.build.variant=hmi4dinbox
+hmi4dinbox.build.extra_flags={build.usb_flags}
 
 # Brown out detection
-touerisdhmi.menu.BOD.2v6=2.6v (default)
-touerisdhmi.menu.BOD.2v6.bootloader.extended_fuses=0xcb
-touerisdhmi.menu.BOD.2v0=2.0v
-touerisdhmi.menu.BOD.2v0.bootloader.extended_fuses=0xce
-touerisdhmi.menu.BOD.2v2=2.2v
-touerisdhmi.menu.BOD.2v2.bootloader.extended_fuses=0xcd
-touerisdhmi.menu.BOD.2v4=2.4v
-touerisdhmi.menu.BOD.2v4.bootloader.extended_fuses=0xcc
-touerisdhmi.menu.BOD.3v4=3.4v
-touerisdhmi.menu.BOD.3v4.bootloader.extended_fuses=0xca
-touerisdhmi.menu.BOD.3v5=3.5v
-touerisdhmi.menu.BOD.3v5.bootloader.extended_fuses=0xc9
-touerisdhmi.menu.BOD.4v3=4.3v
-touerisdhmi.menu.BOD.4v3.bootloader.extended_fuses=0xc8
-touerisdhmi.menu.BOD.disabled=Disabled
-touerisdhmi.menu.BOD.disabled.bootloader.extended_fuses=0xcf
+hmi4dinbox.menu.BOD.2v6=2.6v (default)
+hmi4dinbox.menu.BOD.2v6.bootloader.extended_fuses=0xcb
+hmi4dinbox.menu.BOD.2v0=2.0v
+hmi4dinbox.menu.BOD.2v0.bootloader.extended_fuses=0xce
+hmi4dinbox.menu.BOD.2v2=2.2v
+hmi4dinbox.menu.BOD.2v2.bootloader.extended_fuses=0xcd
+hmi4dinbox.menu.BOD.2v4=2.4v
+hmi4dinbox.menu.BOD.2v4.bootloader.extended_fuses=0xcc
+hmi4dinbox.menu.BOD.3v4=3.4v
+hmi4dinbox.menu.BOD.3v4.bootloader.extended_fuses=0xca
+hmi4dinbox.menu.BOD.3v5=3.5v
+hmi4dinbox.menu.BOD.3v5.bootloader.extended_fuses=0xc9
+hmi4dinbox.menu.BOD.4v3=4.3v
+hmi4dinbox.menu.BOD.4v3.bootloader.extended_fuses=0xc8
+hmi4dinbox.menu.BOD.disabled=Disabled
+hmi4dinbox.menu.BOD.disabled.bootloader.extended_fuses=0xcf
 
 # Compiler link time optimization
-touerisdhmi.menu.LTO.Os=Disabled (default)
-touerisdhmi.menu.LTO.Os.compiler.c.extra_flags=
-touerisdhmi.menu.LTO.Os.compiler.c.elf.extra_flags=
-touerisdhmi.menu.LTO.Os.compiler.cpp.extra_flags=
-touerisdhmi.menu.LTO.Os.ltoarcmd=avr-ar
+hmi4dinbox.menu.LTO.Os=Disabled (default)
+hmi4dinbox.menu.LTO.Os.compiler.c.extra_flags=
+hmi4dinbox.menu.LTO.Os.compiler.c.elf.extra_flags=
+hmi4dinbox.menu.LTO.Os.compiler.cpp.extra_flags=
+hmi4dinbox.menu.LTO.Os.ltoarcmd=avr-ar
 
-touerisdhmi.menu.LTO.Os_flto=Enabled
-touerisdhmi.menu.LTO.Os_flto.compiler.c.extra_flags=-Wextra -flto
-touerisdhmi.menu.LTO.Os_flto.compiler.c.elf.extra_flags=-w -flto
-touerisdhmi.menu.LTO.Os_flto.compiler.cpp.extra_flags=-Wextra -flto
-touerisdhmi.menu.LTO.Os_flto.ltoarcmd=avr-gcc-ar
+hmi4dinbox.menu.LTO.Os_flto=Enabled
+hmi4dinbox.menu.LTO.Os_flto.compiler.c.extra_flags=-Wextra -flto
+hmi4dinbox.menu.LTO.Os_flto.compiler.c.elf.extra_flags=-w -flto
+hmi4dinbox.menu.LTO.Os_flto.compiler.cpp.extra_flags=-Wextra -flto
+hmi4dinbox.menu.LTO.Os_flto.ltoarcmd=avr-gcc-ar
 
 ##############################################################
 
@@ -181,3 +181,68 @@ touerismb.menu.LTO.Os_flto.compiler.c.extra_flags=-Wextra -flto
 touerismb.menu.LTO.Os_flto.compiler.c.elf.extra_flags=-w -flto
 touerismb.menu.LTO.Os_flto.compiler.cpp.extra_flags=-Wextra -flto
 touerismb.menu.LTO.Os_flto.ltoarcmd=avr-gcc-ar
+
+
+##############################################################
+
+pointcastmb.name=PointCast Supervisor MODBUS Slave
+pointcastmb.vid.0=0x2341
+pointcastmb.pid.0=0x0036
+
+pointcastmb.upload.tool=avrdude
+pointcastmb.upload.protocol=avr109
+pointcastmb.upload.maximum_size=28672
+pointcastmb.upload.maximum_data_size=2560
+pointcastmb.upload.speed=57600
+pointcastmb.upload.disable_flushing=true
+pointcastmb.upload.use_1200bps_touch=true
+pointcastmb.upload.wait_for_upload_port=true
+
+pointcastmb.bootloader.tool=avrdude
+pointcastmb.bootloader.low_fuses=0xff
+pointcastmb.bootloader.high_fuses=0x98
+pointcastmb.bootloader.extended_fuses=0xcb
+pointcastmb.bootloader.file=caterina-pointcast-modbus.hex
+pointcastmb.bootloader.unlock_bits=0xff
+pointcastmb.bootloader.lock_bits=0xef
+
+pointcastmb.build.mcu=atmega32u4
+pointcastmb.build.f_cpu=16000000L
+pointcastmb.build.vid=0x2341
+pointcastmb.build.pid=0x8036
+pointcastmb.build.usb_product="Arduino Leonardo"
+pointcastmb.build.board=AVR_LEONARDO
+pointcastmb.build.core=arduino
+pointcastmb.build.variant=pointcast-modbus
+pointcastmb.build.extra_flags={build.usb_flags}
+
+# Brown out detection
+pointcastmb.menu.BOD.2v6=2.6v (default)
+pointcastmb.menu.BOD.2v6.bootloader.extended_fuses=0xcb
+pointcastmb.menu.BOD.2v0=2.0v
+pointcastmb.menu.BOD.2v0.bootloader.extended_fuses=0xce
+pointcastmb.menu.BOD.2v2=2.2v
+pointcastmb.menu.BOD.2v2.bootloader.extended_fuses=0xcd
+pointcastmb.menu.BOD.2v4=2.4v
+pointcastmb.menu.BOD.2v4.bootloader.extended_fuses=0xcc
+pointcastmb.menu.BOD.3v4=3.4v
+pointcastmb.menu.BOD.3v4.bootloader.extended_fuses=0xca
+pointcastmb.menu.BOD.3v5=3.5v
+pointcastmb.menu.BOD.3v5.bootloader.extended_fuses=0xc9
+pointcastmb.menu.BOD.4v3=4.3v
+pointcastmb.menu.BOD.4v3.bootloader.extended_fuses=0xc8
+pointcastmb.menu.BOD.disabled=Disabled
+pointcastmb.menu.BOD.disabled.bootloader.extended_fuses=0xcf
+
+# Compiler link time optimization
+pointcastmb.menu.LTO.Os=Disabled (default)
+pointcastmb.menu.LTO.Os.compiler.c.extra_flags=
+pointcastmb.menu.LTO.Os.compiler.c.elf.extra_flags=
+pointcastmb.menu.LTO.Os.compiler.cpp.extra_flags=
+pointcastmb.menu.LTO.Os.ltoarcmd=avr-ar
+
+pointcastmb.menu.LTO.Os_flto=Enabled
+pointcastmb.menu.LTO.Os_flto.compiler.c.extra_flags=-Wextra -flto
+pointcastmb.menu.LTO.Os_flto.compiler.c.elf.extra_flags=-w -flto
+pointcastmb.menu.LTO.Os_flto.compiler.cpp.extra_flags=-Wextra -flto
+pointcastmb.menu.LTO.Os_flto.ltoarcmd=avr-gcc-ar

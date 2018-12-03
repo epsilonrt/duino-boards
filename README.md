@@ -51,8 +51,9 @@ Here's some numbers to convince you. These sketches were compiled for an **ATmeg
 
 ## Boards List
 
+* [Hmi4DinBox](https://github.com/epsilonrt/Hmi4DinBox) Human-Machine Interface for Din Box 
 * [xPLBee Board](https://github.com/epsilonrt/xplbee)  
 * MODBUS Slave boards from Toueris project
-* Wire HMI board from Toueris project
+* MODBUS Slave boards from PointCast Supervisor project
 
 ------
