@@ -21,7 +21,7 @@
           "boards": [
             {"name": "xplbee"},
             {"name": "hmi4dinbox"},
-            {"name": "touerismb"}
+            {"name": "touerismb"},
             {"name": "pointcastmb"}
           ],
           "toolsDependencies": [
