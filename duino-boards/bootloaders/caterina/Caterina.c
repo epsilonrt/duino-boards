@@ -64,7 +64,7 @@ uint16_t TxLEDPulse = 0; // time remaining for Tx LED pulse
 uint16_t RxLEDPulse = 0; // time remaining for Rx LED pulse
 
 /* Bootloader timeout timer */
-#define TIMEOUT_PERIOD  8000
+#define TIMEOUT_PERIOD  15000 // 15000ms = 15s
 uint16_t Timeout = 0;
 
 uint16_t bootKey = 0x7777;
@@ -86,6 +86,7 @@ void StartSketch (void) {
   RX_LED_OFF();
   TX_LED_OFF();
   L_LED_OFF();
+  BLBUT_RELEASE();
 
   USBPWR_AD_RELEASE();
 
@@ -125,15 +126,19 @@ int main (void) {
   /* Watchdog may be configured with a 15 ms period so must disable it before going any further */
   wdt_disable();
 
+  BLBUT_INIT();
+
   if (mcusr_state & (1 << EXTRF)) {
     // External reset -  we should continue to self-programming mode.
   }
-  else if ( (mcusr_state & (1 << PORF)) && (pgm_read_word (0) != 0xFFFF)) {
+  else if ( (mcusr_state & (1 << PORF)) && (pgm_read_word (0) != 0xFFFF) &&
+            BLBUT_GET()) {
     // After a power-on reset skip the bootloader and jump straight to sketch
     // if one exists.
     StartSketch();
   }
-  else if ( (mcusr_state & (1 << WDRF)) && (bootKeyPtrVal != bootKey) && (pgm_read_word (0) != 0xFFFF)) {
+  else if ( (mcusr_state & (1 << WDRF)) && (bootKeyPtrVal != bootKey) &&
+            (pgm_read_word (0) != 0xFFFF) && BLBUT_GET()) {
     // If it looks like an "accidental" watchdog reset then start the sketch.
     StartSketch();
   }
@@ -197,7 +202,7 @@ void SetupHardware (void) {
 
   /* Audetect/Autoswitch USB Power Mode */
   USBPWR_AD_SETUP();
-  
+
   /* Initialize USB Subsystem */
   USB_Init (USBPWR_GET_MODE());
 }

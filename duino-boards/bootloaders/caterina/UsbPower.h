@@ -74,5 +74,29 @@ USBPWR_GET_MODE (void) {
   return USB_DEVICE_OPT_FULLSPEED | USB_OPT_AUTO_PLL | USB_OPT_REG_ENABLED;
 }
 
+// -----------------------------------------------------------------------------
+static inline void
+BLBUT_INIT (void) {
+#ifdef BL_BUT
+  BL_BUT_PORT |= _BV (BL_BUT);
+#endif
+}
+
+// -----------------------------------------------------------------------------
+static inline uint8_t
+BLBUT_GET (void) {
+#ifdef BL_BUT
+  return (BL_BUT_PIN & _BV (BL_BUT)) != 0;
+#endif
+}
+
+// -----------------------------------------------------------------------------
+static inline void
+BLBUT_RELEASE (void) {
+#ifdef BL_BUT
+  BL_BUT_PORT &= ~_BV (BL_BUT);
+#endif
+}
+
 /* ========================================================================== */
 #endif /* _USB_POWER_H_ defined */

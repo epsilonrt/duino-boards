@@ -64,14 +64,22 @@ EXTMEMOPTS =
 
 # !! You must change and enable the setting below to match your programmer !!
 
+# ATMEL ICE ISP
+#AVRDUDE_PROGRAMMER ?= atmelice_isp
+#AVRDUDE_PORT ?= usb
+
+# ATMEL ICE JTAG
+AVRDUDE_PROGRAMMER ?= atmelice
+AVRDUDE_PORT ?= usb
+
 # AVR Dragon ISP
 #AVRDUDE_PROGRAMMER ?= dragon_isp
 #AVRDUDE_PORT ?= usb
 
 # AVR Dragon JTAG
-AVRDUDE_PROGRAMMER ?= dragon_jtag
-AVRDUDE_PORT ?= usb
-AVARICE_OPT ?= --dragon 
+#AVRDUDE_PROGRAMMER ?= dragon_jtag
+#AVRDUDE_PORT ?= usb
+#AVARICE_OPT ?= --dragon 
 
 # JTAG ICE MkII
 #AVRDUDE_PROGRAMMER  = jtag2

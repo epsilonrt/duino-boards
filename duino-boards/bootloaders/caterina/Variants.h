@@ -91,6 +91,12 @@
 #define RX_LED_BIT 0
 #define RX_LED_ACT 1
 
+// Bootloader button KCENTER, press when power-on to start bootloader
+#define BL_BUT_DDR DDRB
+#define BL_BUT_PORT PORTB
+#define BL_BUT_PIN PINB
+#define BL_BUT 5
+
 #define USBPWR_AUTODETECT 1
 #define USBPWR_AUTOSWITCH 1
 #define USBPWR_MODE USB_CONFIG_ATTR_SELFPOWERED
