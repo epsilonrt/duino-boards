@@ -55,5 +55,6 @@ Here's some numbers to convince you. These sketches were compiled for an **ATmeg
 * [xPLBee Board](https://github.com/epsilonrt/xplbee)  
 * MODBUS Slave boards from Toueris project
 * MODBUS Slave boards from PointCast Supervisor project
+* MODBUS Slave boards from LoRaBus project
 
 ------
